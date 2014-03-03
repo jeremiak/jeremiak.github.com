@@ -3,9 +3,7 @@ layout: post
 title: Not that easy from prose.io
 date: Sat Mar 01 2014
 categories: jekyll
-published: 
-  - true
-  - "true"
+published: false
 ---
 
 ## Let's see just how easy this is
