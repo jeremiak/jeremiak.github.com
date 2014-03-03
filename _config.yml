@@ -2,3 +2,15 @@ name: jeremiak
 markdown: redcarpet
 pygments: true
 timezone: America/Los_Angeles
+prose:
+  rooturl: "_posts"
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "date"
+        field:
+          element: "hidden"
+          value: CURRENT_DATETIME
