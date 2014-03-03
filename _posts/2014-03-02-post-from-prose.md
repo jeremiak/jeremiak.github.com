@@ -1,10 +1,15 @@
 ---
 layout: post
-title:  "Not that easy from prose.io"
-date:   2014-03-02
+title: Not that easy from prose.io
+date: Sat Mar 01 2014
 categories: jekyll
+published: 
+  - true
+  - "true"
 ---
 
 ## Let's see just how easy this is
+
+Getting it posted?
 
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
