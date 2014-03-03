@@ -4,6 +4,7 @@ pygments: true
 timezone: America/Los_Angeles
 prose:
   rooturl: "_posts"
+  media: "media"
   metadata:
     _posts:
       - name: "layout"
@@ -13,6 +14,7 @@ prose:
       - name: "date"
         field:
           element: "text"
+          label: "post date"
       - name: "title"
         field:
           element: "text"
