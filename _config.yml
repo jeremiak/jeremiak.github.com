@@ -18,10 +18,6 @@ prose:
           element: "text"
       - name: "published"
         field:
-          element: "select"
-          label: "Published?"
-          options:
-            - name: "Published"
-              value: true
-            - name: "Not published"
-              value: false
+          element: "checkbox"
+          label: "published"
+          value: true
