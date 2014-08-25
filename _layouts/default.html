@@ -11,13 +11,20 @@
     </head>
     <body>
         <div class="site">
-          <div class="welcome">
-            <h1><span class="hi">yo, my name is</span><span class="name">jeremia</span></h1>
-            <img src="/img/jeremia.png">
+          <div class="nav">
+            <h1><span class="name"><a href="/">jeremia</a></span></h1>
+            <ul>
+              {% if page.type == "projects" %}
+              <li><a class="current" href="#">Projects</a></li>
+              <li><a href="/posts">Posts</a></li>
+              {% else %}
+              <li><a href="/projects">Projects</a></li>
+              <li><a class="current" href="#">Posts</a></li>
+              {% endif %}
+            </ul>
             <div class="clearfix"></div>
           </div>
-          <div class="main">
-
+          <div class="main {{ page.type }}">
               {{ content }}
 
           </div>
