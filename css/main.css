@@ -1,3 +1,19 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+h1 { margin-bottom: 1em; }
+p { margin: 1em 0; }
+
+/**/
+
 body * {
 
 }
@@ -47,10 +63,15 @@ div.site {
 }
 .main h2 {
   font-weight:100;
+  padding-left:35px;
+}
+.main ul {
+  margin-left:60px;
 }
 .main h2, .main li {
   font-size:2em;
-  padding:20px;
+  padding-top:20px;
+  padding-bottom:20px;
 }
 .footer {
   text-align:center;
