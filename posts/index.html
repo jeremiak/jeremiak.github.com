@@ -1,13 +1,10 @@
 ---
 layout: default
-title: things
+title: posts
+type: posts
 ---
-
-<div id="home">
-  <h1>Blog</h1>
-  <ul class="posts">
-    {% for post in site.categories.blog %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<ul>
+{% for post in site.posts %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

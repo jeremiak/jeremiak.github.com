@@ -1,7 +1,10 @@
 name: jeremiak
+url: www.jeremiak.com
+description: my things
 markdown: redcarpet
 pygments: true
 timezone: America/Los_Angeles
+
 prose:
   rooturl: "_posts"
   media: "media"

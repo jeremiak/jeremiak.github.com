@@ -20,9 +20,15 @@ body * {
 .clearfix {
   clear:both;
 }
-a, a:visited, a:active, a.hover {
+a, a:visited, a:active {
   color:rgb(207, 110, 65);
   text-decoration:none;
+}
+a:hover, a.current {
+  border-bottom:3px solid rgb(207, 110, 65);
+}
+.name {
+  font-family: 'Abril Fatface', cursive;
 }
 div.site {
   width:900px;
@@ -39,7 +45,6 @@ div.site {
   float:right;
   width:160px;
   height:160px;
-
   margin-top:25px;
   margin-right:80px;
 }
@@ -57,9 +62,39 @@ div.site {
 .welcome .name {
   display:block;
   font-size:8em;
-  font-family: 'Abril Fatface', cursive;
   text-align:center;
   padding-left:20px;
+}
+.nav {
+  margin-top:14px;
+}
+.nav img {
+  border-radius:20px;
+  float:right;
+  width:40px;
+  height:40px;
+}
+.nav h1 {
+  float:left;
+}
+.nav h1 a, .nav h1 a:hover {
+  color:black;
+  border:none;
+}
+.nav .name {
+  font-size:2em;
+  padding-left:20px;
+}
+.nav ul {
+  float:right;
+  list-style-type:none;
+  margin-top:.5em;
+  width:30%;
+}
+.nav li {
+  float:left;
+  font-size:1.5em;
+  width:48%;
 }
 .main h2 {
   font-weight:100;
