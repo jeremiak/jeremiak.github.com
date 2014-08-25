@@ -38,7 +38,7 @@ div.site {
   display:float;
   margin:0 auto;
   margin-top:1.5em;
-  width:900px;
+  width:100%;
 }
 .welcome img {
   border-radius:80px;
