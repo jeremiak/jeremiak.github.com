@@ -108,6 +108,28 @@ div.site {
   padding-top:20px;
   padding-bottom:20px;
 }
+
+.project {
+  border:1px solid rgb(207, 110, 65);
+  float:left;
+  min-height:300px;
+  margin:4px;
+  text-align:center;
+  width:285px;
+}
+.project h2 {
+  padding-left:0;
+}
+.project ul.links {
+  list-style-type:none;
+  display:inline;
+}
+.projects li {
+  font-size:1em;
+  padding-top:0;
+  padding-bottom:0;
+  width:30%;
+}
 .footer {
   text-align:center;
   font-size:.6em;

@@ -29,6 +29,14 @@
   .main ul {
     margin-left:0;
   }
+  .nav ul {
+    font-size:.8em;
+    margin-top:13px;
+    width:45%;
+  }
+  .project {
+    margin-left:8px;
+  }
 }
 @media all and (max-width: 350px) {
   .welcome img {
