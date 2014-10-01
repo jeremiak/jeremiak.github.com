@@ -1,0 +1,13 @@
+language: ruby
+script:
+- jekyll build
+deploy:
+  - provider: s3
+    skip_cleanup: true
+    access_key_id: AKIAJU2VVDLAF4IZ6Q6Q
+    secret_access_key:
+      secure: d8kZ6c/TPs0B1AKTB32Q3BnJ+MOOuV7lEBDtQAuI6VtVJbcBUaThY2gGEdj+zuvSBMWAREJcumUxa2ovlgFe5qEK+wlTU1LAQRjyhv8g1hRyfzI/yNipEjffGiD7lF5IkMLBx91oMhEFTZ73i1055h2/dgpDHkD5rWlaH+exZHk=
+    bucket: jeremiak.com
+    local-dir: public
+    on:
+      branch: master
