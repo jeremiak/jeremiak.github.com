@@ -2,8 +2,11 @@ name: jeremiak
 url: www.jeremiak.com
 description: my things
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 timezone: America/Los_Angeles
+
+source: source
+destination: public
 
 prose:
   rooturl: "_posts"
