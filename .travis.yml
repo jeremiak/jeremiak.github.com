@@ -3,6 +3,7 @@ script:
 - jekyll build
 deploy:
   provider: s3
+  skip_cleanup: true
   access_key_id: AKIAJZVAFP2PKNHT4M5Q
   secret_access_key:
     secure: Rwdsdwl+A3T6xTORjzyRoLU9XhSxmheXD43pviH7C6ynVOLcfIbEYgPVZ+jYDweZ977qP07jR0ILZ1hEIA3CCWqWR6Yjz6mkn27aITPoQ4rZyRRVPjjmRlOxP0y8P0WXLt34V/xN8L/VoSqnSA+M08Q4Tmd6g0bJhQYFBGl3CsQ=
