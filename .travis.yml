@@ -9,5 +9,6 @@ deploy:
     secure: Rwdsdwl+A3T6xTORjzyRoLU9XhSxmheXD43pviH7C6ynVOLcfIbEYgPVZ+jYDweZ977qP07jR0ILZ1hEIA3CCWqWR6Yjz6mkn27aITPoQ4rZyRRVPjjmRlOxP0y8P0WXLt34V/xN8L/VoSqnSA+M08Q4Tmd6g0bJhQYFBGl3CsQ=
   bucket: jeremiak-com
   local-dir: public
+  cache_control: max-age=60
   on:
     branch: master
