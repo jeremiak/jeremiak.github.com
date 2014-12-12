@@ -2,47 +2,9 @@
   .mobile-hide {
     display:none;
   }
-  body {
-
-  }
-
-  .intro {
-    width:auto;
-  }
-
-  .hi {
-    left:35px;
-    font-size:.7em;
-  }
-  .name {
-    font-size:2.1em;
-  }
-  .job {
-    width:250px;
-  }
-  h2 {
-    font-size:1.2em;
-  }
   h3 {
     display:none;
-    font-size:1.1em;
   }
-  .col ul {
-    text-align:left;
-  }
-  .col li {
-    display:block;
-    font-size:1.3em;
-    margin-left:0;
-  }
-  li:first-letter {
-    padding-left:1.3em;
-  }
-
-  .col.center-horizontal > * {
-    margin:0 auto;
-  }
-
   footer {
     position:absolute;
     bottom:-1.3em;
