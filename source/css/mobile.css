@@ -43,6 +43,11 @@
     margin:0 auto;
   }
 
+  footer {
+    position:absolute;
+    bottom:-1.3em;
+  }
+
 }
 @media all and (max-width: 350px) {
 
