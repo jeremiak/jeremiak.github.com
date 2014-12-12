@@ -4,12 +4,8 @@
 div.inline {
   display:inline-block;
 }
-a, a:hover, a:visited {
-  color:RebeccaPurple;
-  text-decoration:none;
-}
+
 body {
-  background-color:OrangeRed;
   position:relative;
 }
 ol, ul {
@@ -22,45 +18,65 @@ ol, ul {
   margin:0 auto;
   position:relative;
   width:300px;
-}
-.intro span {
+
+  @media all and (max-width: 769px) {
+    width:auto;
+  }
 }
 .hi {
   position:absolute;
   top:10px;
   left:50px;
+
+  @media all and (max-width: 769px) {
+    left:35px;
+  }
 }
 .name {
-  font-family: 'Abril Fatface';
-  font-size:3em;
   top:0;
 }
 .avatar {
-  border-radius:75px;
-  border:3px solid black;
   width:150px;
   height:150px;
 }
 .job {
   text-align:center;
   width:300px;
+
+  @media all and (max-width: 769px) {
+    width:250px;
+  }
 }
 .col ul {
   text-align:center;
+
+  @media all and (max-width: 769px) {
+    text-align:left;
+  }
 }
 .col li {
   display:inline;
-  font-size:1.5em;
   margin-left:1.1em;
-}
-.project {
-  border:1px solid black;
+
+  @media all and (max-width: 769px) {
+    display:block;
+    margin-left:0;
+
+    &:first-letter {
+      padding-left:1.3em;
+    }
+  }
 }
 footer {
   position:fixed;
   bottom:0;
   right:0;
   padding:1em;
+
+  @media all and (max-width: 769px) {
+    position:absolute;
+    bottom:-1.3em;
+  }
 }
 footer #colophon + ul {
   display:none;
@@ -78,20 +94,9 @@ footer li {
   display:inline;
 }
 footer li + li {
-  border-left:1px solid black;
   padding-left:.3em;
 }
 footer strong {
   padding-left:.3em;
   padding-right:.3em;
-}
-footer .orange-red {
-  background-color:black;
-  color:OrangeRed;
-}
-footer .rebecca-purple {
-  color:RebeccaPurple;
-}
-footer .abril-fatface {
-  font-family: 'Abril Fatface';
 }

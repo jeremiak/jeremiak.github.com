@@ -1,0 +1,38 @@
+h1, h2, h3, h4, h5, h6 {}
+h2 {
+  @media all and (max-width: 769px) {
+    font-size:1.2em;
+  }
+}
+h3 {
+  @media all and (max-width: 769px) {
+    display:none;
+    font-size:1.1em;
+  }
+}
+a, a:hover, a:visited {
+  text-decoration:none;
+}
+.hi {
+  @media all and (max-width: 769px) {
+    font-size:.7em;
+  }
+}
+.name {
+  font-family: 'Abril Fatface';
+  font-size:3em;
+
+  @media all and (max-width: 769px) {
+    font-size:2.1em;
+  }
+}
+.col li {
+  font-size:1.5em;
+
+  @media all and (max-width: 769px) {
+    font-size:1.3em;
+  }
+}
+footer .abril-fatface {
+  font-family: 'Abril Fatface';
+}

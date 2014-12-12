@@ -87,6 +87,10 @@ div, h1, h2, h3, h4, h5, h6, p {
   display: -webkit-flex;
   display:flex;
   justify-content:center;
+
+  @media all and (max-width: 769px) {
+    margin:0 auto;
+  }
 }
 
 @media all and (max-width: 769px) {
