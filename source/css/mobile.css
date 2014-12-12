@@ -1,45 +1,49 @@
 @media all and (max-width: 769px) {
-  div.site {
-    width:100%;
-  }
-  .welcome {
-    padding-left:20px;
-  }
-  .welcome img {
-    width:60px;
-    height:60px;
-    margin-top:15px;
-    margin-right:30px;
-  }
-  .welcome .hi {
-    margin-left:30px;
-    margin-top:10px;
-  }
-  .welcome .name {
-    font-size:4em;
-    padding-left:0;
-  }
-  .main {
-    padding-left:8px;
-    padding-right:8px;
-  }
-  .main h2 {
-    padding-left:0;
-  }
-  .main ul {
-    margin-left:0;
-  }
-  .nav ul {
-    font-size:.8em;
-    margin-top:13px;
-    width:45%;
-  }
-  .project {
-    margin-left:8px;
-  }
-}
-@media all and (max-width: 350px) {
-  .welcome img {
+  .mobile-hide {
     display:none;
   }
+  body {
+
+  }
+
+  .intro {
+    width:auto;
+  }
+
+  .hi {
+    left:35px;
+    font-size:.7em;
+  }
+  .name {
+    font-size:2.1em;
+  }
+  .job {
+    width:250px;
+  }
+  h2 {
+    font-size:1.2em;
+  }
+  h3 {
+    display:none;
+    font-size:1.1em;
+  }
+  .col ul {
+    text-align:left;
+  }
+  .col li {
+    display:block;
+    font-size:1.3em;
+    margin-left:0;
+  }
+  li:first-letter {
+    padding-left:1.3em;
+  }
+
+  .col.center-horizontal > * {
+    margin:0 auto;
+  }
+
+}
+@media all and (max-width: 350px) {
+
 }
