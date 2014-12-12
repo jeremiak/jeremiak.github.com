@@ -33,6 +33,11 @@ a, a:hover, a:visited {
     font-size:1.3em;
   }
 }
+footer {
+  @media all and (max-width: 769px) {
+    font-size:.8em;
+  }
+}
 footer .abril-fatface {
   font-family: 'Abril Fatface';
 }

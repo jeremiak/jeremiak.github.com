@@ -7,4 +7,8 @@
 }
 footer li + li {
   border-left:1px solid black;
+
+  @media all and (max-width: 769px) {
+    border-left:none;
+  }
 }
