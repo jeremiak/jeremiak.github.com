@@ -1,0 +1,9 @@
+.center-text {
+  text-align:center;
+}
+.inline {
+  display:inline-block;
+}
+.inline-children > * {
+  display:inline !important;
+}

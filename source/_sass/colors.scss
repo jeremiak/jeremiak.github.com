@@ -1,13 +1,29 @@
+$backgroundColor:LightSlateGray;
+$linkColor:LemonChiffon;
+
 body {
-  background-color:OrangeRed;
+  background-color:$backgroundColor;
 }
 a, a:hover, a:visited {
-  color:RebeccaPurple;
+  color:$linkColor;
 }
-footer .orange-red {
+.project li {
   background-color:black;
-  color:OrangeRed;
+  color:$backgroundColor;
 }
-footer .rebecca-purple {
-  color:RebeccaPurple;
+footer {
+  background-color:$backgroundColor;
+}
+footer .background-color {
+  background-color:black;
+  color:$backgroundColor;
+}
+footer .background-color:after {
+  content:"" + $backgroundColor;
+}
+footer .link-color {
+  color:$linkColor;
+}
+footer .link-color:after {
+  content:"" + $linkColor;
 }

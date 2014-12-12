@@ -6,7 +6,6 @@ h2 {
 }
 h3 {
   @media all and (max-width: 769px) {
-    display:none;
     font-size:1.1em;
   }
 }
@@ -33,11 +32,14 @@ a, a:hover, a:visited {
     font-size:1.3em;
   }
 }
+.project ul {
+  font-size:.5em;
+}
 footer {
   @media all and (max-width: 769px) {
     font-size:.8em;
   }
 }
-footer .abril-fatface {
+footer .font-family {
   font-family: 'Abril Fatface';
 }
