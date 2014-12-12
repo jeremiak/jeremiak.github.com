@@ -24,8 +24,15 @@ window.onload = function (){
   var x = document.getElementById('colophon').addEventListener('click', showColophon);
 
   if (window.location.pathname.indexOf('projects') == -1) {
-    var jobTitles = ['a front end developer','a developer advocate','an open data evangelist','a hacker', 'a 2014 code for america fellow'],
-        currentJobIndex = 0;
+    var currentJobIndex = 0, jobTitles = [
+      'a front end developer',
+      'a developer advocate',
+      'an open data evangelist',
+      'a hacker',
+      'a 2014 code for america fellow',
+      'an ardent supportor of open source',
+      'recovering product manager'
+    ];
 
     changeJobTitle();
     setInterval(changeJobTitle, 1700);
