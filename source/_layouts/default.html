@@ -2,7 +2,7 @@
 <html>
     <head>
       {% include head.html %}
-      <title>{{ title }}</title>
+      <title>{{ page.title }}</title>
     </head>
     <body>
         <div class="container">
@@ -12,10 +12,12 @@
         <footer>
           <a href="#" id="colophon">colophon</a>
           <ul>
-            <li>the background color is <strong class="orange-red">OrangeRed</strong></li>
-            <li>the link color is <strong class="rebecca-purple">RebeccaPurple</strong></li>
-            <li>the cool font for my name is <strong class="abril-fatface">AbrilFatface</strong></li>
+            <li>the background color is <strong class="background-color"></strong></li>
+            <li>the link color is <strong class="link-color"></strong></li>
+            <li>the cool font for my name is <strong class="font-family">AbrilFatface</strong></li>
           </ul>
         </footer>
+
+        {% include svgfilter.html %}
     </body>
 </html>
