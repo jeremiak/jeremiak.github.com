@@ -1,0 +1,38 @@
+img.avatar {
+  width:150px;
+  height:150px;
+}
+
+.greyscale {
+  filter:url(filters.svg#grayscale);
+  -webkit-filter:grayscale(1);
+}
+
+.greyscale:hover {
+  filter:none;
+  -webkit-filter:grayscale(0);
+}
+
+.project .photo {
+  background-color:SlateGray;
+  background-repeat:no-repeat;
+  width:100%;
+  min-height:200px;
+  margin-left:0;
+  margin-top:0;
+}
+
+.project .photo.horizontal {
+  background-position:50% 50%;
+  background-size:250px auto;
+}
+
+.project .photo.vertical {
+  background-position:50% 50%;
+  background-size:auto 190px;
+}
+
+.project .photo.square {
+  background-position:50% 50%;
+  background-size:170px auto;
+}

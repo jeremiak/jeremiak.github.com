@@ -19,6 +19,65 @@ div, h1, h2, h3, h4, h5, h6, p {
   max-width:960px;
   width:80%;
 }
+nav {
+  clear:both;
+  display:block;
+  position:relative;
+  min-height:50px;
+  width:100%;
+
+  @media all and (max-width: 769px) {
+    min-height:100px;
+  }
+}
+nav:after {
+  content:"";
+  clear:both;
+}
+nav .brand, nav ul {
+  float:left;
+  height:100%;
+  position:absolute;
+  display:flex;
+  align-items:center;
+  width:40%;
+}
+nav .brand {
+  text-align:center;
+
+  @media all and (max-width: 769px) {
+    display:block;
+    width:100%;
+
+    img {
+      margin:0 auto;
+    }
+
+    & h1 {
+      width:100%;
+    }
+  }
+}
+nav .brand > *:first-child {
+  margin-right:4%;
+}
+nav .brand img {
+  border-radius:20px;
+  width:40px;
+  height:40px;
+}
+nav ul {
+  right:0;
+
+  @media all and (max-width: 769px) {
+    display:none;
+  }
+}
+nav li {
+  display:inline;
+  flex-grow:1;
+  text-align:center;
+}
 .row {
   display:block;
   margin-bottom:2rem;
@@ -38,10 +97,18 @@ div, h1, h2, h3, h4, h5, h6, p {
 .col {
   float:left;
   margin-left:4%;
+  min-height:1px;
+}
+.col > * {
+  margin-left:4%;
+  margin-right:4%;
 }
 .col {
-  content:" ";
-  min-height:1px;
+  padding-top:2%;
+  padding-bottom:2%;
+}
+.col.sticky-top {
+  padding-top:0;
 }
 .row .col:first-child {
   margin-left:0;
