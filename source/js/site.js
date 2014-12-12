@@ -1,10 +1,6 @@
-(function (){
+window.onload = function (){
 
   console.log('nice to see you, old friend :)');
-
-  var jobTitles = ['a front end developer','a developer advocate','an open data evangelist','a hacker', 'a 2014 code for america fellow'],
-      currentJobIndex = 0,
-      homeZip = 94118;
 
   function changeJobTitle() {
     var jobElement = document.getElementsByClassName('job')[0].children[0];
@@ -19,17 +15,19 @@
     jobElement.textContent = jobTitles[currentJobIndex];
   }
 
-  function loadWeather(zipCode) {
-    console.log('finding the weather for zip:', zipCode);
-    console.log('well... that will be implemented soon');
-    var weatherElement = document.getElementsByClassName('weather')[0];
-
-    setTimeout(function() {
-      weatherElement.textContent = 'rainy';
-    }, 3000);
+  function showColophon(e) {
+    console.log('yo');
+    var colophonElement = e.target;
+    colophonElement.classList.add('hide');
   }
 
-  changeJobTitle();
-  setInterval(changeJobTitle, 1700);
-  //loadWeather(homeZip);
-})();
+  var x = document.getElementById('colophon').addEventListener('click', showColophon);
+
+  if (window.location.pathname.indexOf('projects') == -1) {
+    var jobTitles = ['a front end developer','a developer advocate','an open data evangelist','a hacker', 'a 2014 code for america fellow'],
+        currentJobIndex = 0;
+
+    changeJobTitle();
+    setInterval(changeJobTitle, 1700);
+  }
+}
