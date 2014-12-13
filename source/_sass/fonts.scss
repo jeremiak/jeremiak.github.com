@@ -12,6 +12,9 @@ h3 {
 a, a:hover, a:visited {
   text-decoration:none;
 }
+nav .brand h1 {
+  font-family: 'Abril Fatface';
+}
 .hi {
   @media all and (max-width: 769px) {
     font-size:.7em;
