@@ -29,9 +29,7 @@ window.onload = function (){
       'a developer advocate',
       'an open data evangelist',
       'a hacker',
-      'a 2014 code for america fellow',
-      'an ardent supportor of open source',
-      'recovering product manager'
+      'a 2014 code for america fellow'
     ];
 
     changeJobTitle();
