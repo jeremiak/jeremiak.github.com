@@ -152,12 +152,15 @@ nav li {
   width:100%;
 }
 .col.center-horizontal {
+  display: -webkit-box;
   display: -webkit-flex;
   display:flex;
   justify-content:center;
 
   @media all and (max-width: 769px) {
-    margin:0 auto;
+    & > * {
+      margin:0 auto;
+    }
   }
 }
 
