@@ -24,7 +24,7 @@ window.onload = function (){
   var x = document.getElementById('colophon').addEventListener('click', showColophon);
 
   if (window.location.pathname.indexOf('projects') == -1) {
-    var currentJobIndex = 0, jobTitles = [
+    var currentJobIndex = -1, jobTitles = [
       'a front end developer',
       'a developer advocate',
       'an open data evangelist',
