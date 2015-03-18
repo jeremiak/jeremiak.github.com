@@ -37,17 +37,8 @@ ol, ul {
   @media all and (max-width: 769px) {
   }
 }
-.col ul {
-  text-align:center;
-
-  @media all and (max-width: 769px) {
-    text-align:left;
-  }
-}
+/*
 .col li {
-  display:inline;
-  margin-left:.6em;
-
   @media all and (max-width: 769px) {
     display:block;
     margin-left:0;
@@ -57,26 +48,22 @@ ol, ul {
     }
   }
 }
-.project ul {
-  text-align:left;
-
+*/
+.project ul, .skill-list {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  align-content:space-around;
 }
 .project li {
-  margin-left:0;
+  margin-top:.3em;
+  margin-right:.3em;
   padding-left:1em;
   padding-right:1em;
   padding-top:.3em;
   padding-bottom:.3em;
-  text-align:center;
 
-  @media all and (max-width: 769px) {
-    padding-left:0;
-    display:inline-block;
-  }
-}
-.project li + li {
-  margin-top:.3em;
-  margin-right:0;
 }
 .project ul, .project p {
   margin-bottom:1em;

@@ -1,5 +1,5 @@
-$backgroundColor:LightSlateGray;
-$linkColor:LemonChiffon;
+$backgroundColor:LemonChiffon;
+$linkColor:LightSlateGray;
 
 body {
   background-color:$backgroundColor;
@@ -7,8 +7,8 @@ body {
 a, a:hover, a:visited {
   color:$linkColor;
 }
-.project .skill-list li {
-  background-color:black;
+.skill-list li {
+  background-color:$linkColor;
   color:$backgroundColor;
 }
 footer {
