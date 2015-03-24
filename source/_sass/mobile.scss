@@ -1,13 +1,6 @@
-@media all and (max-width: 769px) {
-  .mobile-hide {
-    display:none;
+@media all and (max-width: 550px) {
+  .mobile-center {
+    display:flex;
+    justify-content:center;
   }
-  footer {
-    position:absolute;
-    bottom:-1.3em;
-  }
-
-}
-@media all and (max-width: 350px) {
-
 }
