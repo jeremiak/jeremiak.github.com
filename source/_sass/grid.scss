@@ -32,3 +32,18 @@
   }
 }
 
+@media all and (max-width: 769px) {
+  .container {
+    width:100%;
+  }
+
+  .column {
+    display:block;
+  }
+}
+@media all and (max-width: 550px) {
+  .column {
+    float:none;
+    width:100% !important;
+  }
+}
