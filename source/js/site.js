@@ -1,3 +1,15 @@
+var c = {yo: 'dude', foo: 'bar'};
+
+function handleChange(changeObject) {
+  console.log('changed');
+  changeObject.forEach(function(change) {
+    console.log('change event', change);
+  });
+}
+
+Object.observe(c, handleChange);
+console.log('c is being watched');
+
 function nextJobHandler (jobSelector) {
   var currentJobIndex = 0,
       totalJobs = document.querySelectorAll(jobSelector).length, 
