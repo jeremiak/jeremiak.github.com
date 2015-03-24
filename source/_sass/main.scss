@@ -1,58 +1,9 @@
-svg {
-  display:none;
-}
 body {
   position:relative;
 }
 ol, ul {
   list-style-type:none;
 }
-.container {
-  margin-top:4rem;
-}
-.intro {
-  margin:0 auto;
-  position:relative;
-  width:300px;
-
-  @media all and (max-width: 769px) {
-    width:auto;
-  }
-}
-.hi {
-  position:absolute;
-  top:10px;
-  left:50px;
-
-  @media all and (max-width: 769px) {
-    left:35px;
-  }
-}
-.name {
-  top:0;
-}
-$jobHeight:2em;
-.job-holder {
-  height:$jobHeight;
-  overflow-y:hidden;
-}
-.job {
-  height:$jobHeight;
-  font-size:1.5em;
-  margin-top:0;
-}
-/*
-.col li {
-  @media all and (max-width: 769px) {
-    display:block;
-    margin-left:0;
-
-    &:first-letter {
-      padding-left:1.3em;
-    }
-  }
-}
-*/
 .project ul, .skill-list {
   display:flex;
   flex-direction:row;

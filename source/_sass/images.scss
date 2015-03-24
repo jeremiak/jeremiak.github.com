@@ -1,18 +1,8 @@
 img.avatar {
+  border-radius:75px;
   width:150px;
   height:150px;
 }
-
-.greyscale {
-  filter:url(filters.svg#grayscale);
-  -webkit-filter:grayscale(1);
-}
-
-.greyscale:hover {
-  filter:none;
-  -webkit-filter:grayscale(0);
-}
-
 .project .photo {
   background-color:SlateGray;
   background-repeat:no-repeat;

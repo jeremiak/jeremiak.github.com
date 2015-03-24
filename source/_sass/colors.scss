@@ -1,14 +1,30 @@
-$backgroundColor:LemonChiffon;
-$linkColor:LightSlateGray;
+$backgroundColor:White;
+$accentColor:MediumAquaMarine;
 
 body {
   background-color:$backgroundColor;
+  margin-top:20px;
+}
+body::before {
+  background-color:$accentColor;
+  min-height:.8rem;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  content:"";
 }
 a, a:hover, a:visited {
-  color:$linkColor;
+  color:$accentColor;
+  text-decoration:none;
+  border-bottom:2px solid $accentColor;
+  padding-bottom:0;
+}
+a:hover {
+  border-bottom-style:dotted;
 }
 .skill-list li {
-  background-color:$linkColor;
+  background-color:$accentColor;
   color:$backgroundColor;
 }
 footer {
@@ -22,8 +38,8 @@ footer .background-color:after {
   content:"" + $backgroundColor;
 }
 footer .link-color {
-  color:$linkColor;
+  color:$accentColor;
 }
 footer .link-color:after {
-  content:"" + $linkColor;
+  content:"" + $accentColor;
 }

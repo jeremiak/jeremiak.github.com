@@ -2,16 +2,11 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-// Mixins
-@import "flex";
-
 // Imports
 @import "grid";
 @import "main";
-@import "borders";
 @import "images";
 @import "colors";
 @import "fonts";
 @import "mobile";
 @import "helpers";
-@import "transitions";
