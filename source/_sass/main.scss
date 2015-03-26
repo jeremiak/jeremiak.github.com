@@ -28,42 +28,15 @@ footer {
   bottom:0;
   right:0;
   padding:1em;
+  text-align:right;
 
   @media all and (max-width: 769px) {
     position:absolute;
     height:0px;
   }
 }
-footer #colophon {
-  @media all and (max-width: 769px) {
-    display:none;
-  }
-}
-footer #colophon + ul {
-  display:none;
-
-  @media all and (max-width: 769px) {
-    display:block;
-  }
-}
-footer #colophon.hide {
-  display:none;
-}
-footer #colophon.hide + ul {
-  display:block;
-}
 footer ul {
-  text-align:right;
-}
-footer li {
-  display:inline;
-
-  @media all and (max-width: 769px) {
-    display:block;
-  }
-}
-footer li + li {
-  padding-left:.3em;
+  padding:0;
 }
 footer strong {
   padding-left:.3em;
