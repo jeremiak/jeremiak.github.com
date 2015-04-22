@@ -1,0 +1,31 @@
+body.new::before {
+  @include vendor-prefix-prop('animation-name', 'swingBarTopToLeft');
+}
+body.new a, body.new footer .link-color,{
+  @include vendor-prefix-prop('animation-name', 'linkColorChange');
+}
+body::before, a, .link-color {
+  @include vendor-prefix-prop('animation-delay', '.5s');
+  @include vendor-prefix-prop('animation-duration', '2s');
+  @include vendor-prefix-prop('animation-timing-function', 'ease');
+  @include vendor-prefix-prop('transform-origin', '0% 100%');
+  @include vendor-prefix-prop('animation-fill-mode', 'forwards');
+}
+
+$newColor: RebeccaPurple;
+body.new strong.link-color::after {
+  content: "" + $newColor;
+}
+
+@include keyframes(swingBarTopToLeft) {
+  to {
+    transform: rotate(90deg) translateX(-10px);
+    background-color: $newColor;
+  }
+}
+@include keyframes(linkColorChange) {
+  to {
+    border-bottom-color: $newColor;
+    color: $newColor;
+  }
+}
