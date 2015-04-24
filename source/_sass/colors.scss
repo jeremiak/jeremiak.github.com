@@ -13,6 +13,7 @@ body::before {
   top:0;
   left:0;
   content:"";
+  cursor:pointer;
 }
 a, a:hover, a:visited {
   color:$accentColor;
