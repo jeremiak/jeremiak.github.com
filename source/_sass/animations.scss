@@ -4,7 +4,10 @@ body.new::before {
 body.new a, body.new footer .link-color,{
   @include vendor-prefix-prop('animation-name', 'linkColorChange');
 }
-body::before, a, .link-color {
+body.new .post .background-date {
+  @include vendor-prefix-prop('animation-name', 'bgDateColorChange');
+}
+body::before, a, .link-color, .background-date {
   @include vendor-prefix-prop('animation-delay', '.5s');
   @include vendor-prefix-prop('animation-duration', '2s');
   @include vendor-prefix-prop('animation-timing-function', 'ease');
@@ -16,7 +19,6 @@ $newColor: RebeccaPurple;
 body.new strong.link-color::after {
   content: "" + $newColor;
 }
-
 @include keyframes(swingBarTopToLeft) {
   to {
     transform: rotate(90deg) translateX(-10px);
@@ -26,6 +28,11 @@ body.new strong.link-color::after {
 @include keyframes(linkColorChange) {
   to {
     border-bottom-color: $newColor;
+    color: $newColor;
+  }
+}
+@include keyframes(bgDateColorChange) {
+  to {
     color: $newColor;
   }
 }

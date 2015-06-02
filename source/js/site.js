@@ -18,8 +18,10 @@ function setAccentColor(color) {
   var styles = document.createElement('style');
   document.querySelector('head').appendChild(styles);
   styles.sheet.addRule('body::before', 'background-color: ' + color);
+  styles.sheet.addRule('.post .background-date', 'color: ' + color);
   styles.sheet.addRule('footer .link-color', 'color: ' + color);
   styles.sheet.addRule('footer .link-color:after', 'content: "' + titleCase(color) + '"');
+  console.log('styles', styles);
 }
 
 function setLinkColor(color) {
