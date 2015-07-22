@@ -5,6 +5,8 @@ date:   Thu, 17 Apr 2014 20:19:00 -0400
 category: blog
 ---
 
+`Cache-Control` is Key
+
 [Context switching as easy as cd](https://github.com/jeremiak/context-
 switcher):
 

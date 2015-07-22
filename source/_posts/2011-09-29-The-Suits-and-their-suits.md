@@ -3,6 +3,7 @@ layout: post
 title:  "The Suits and their suits"
 date:   Thu, 29 Sep 2011 18:36:00 -0400
 category: blog
+published: false
 ---
 
 This mobile patent war is getting ridiculous. Its more dramatic than All My

@@ -3,6 +3,7 @@ layout: post
 title:  "Compulsory Comments: Another Bubble?"
 date:   Tue, 19 Jul 2011 13:33:05 -0400
 category: blog
+published: false
 ---
 
 To be honest, I don’t really concern myself with the question of is this a

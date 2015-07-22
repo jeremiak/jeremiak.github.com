@@ -4,6 +4,7 @@ title:  "self::profess_love_for(tech);"
 date:   Thu, 21 Jul 2011 10:00:06 -0400
 category: blog
 category: blog
+published: false
 ---
 
 There are some truly amazing and smart people in technology, and I’m not sure

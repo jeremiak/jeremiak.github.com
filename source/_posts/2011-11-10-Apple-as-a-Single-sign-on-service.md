@@ -3,6 +3,7 @@ layout: post
 title:  "Apple as a Single-sign-on service"
 date:   Thu, 10 Nov 2011 01:48:00 -0500
 category: blog
+published: false
 ---
 
 It’s curious to me that Apple is not yet a single sign-on provider and it

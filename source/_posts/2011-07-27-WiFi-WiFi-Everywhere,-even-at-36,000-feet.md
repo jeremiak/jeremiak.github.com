@@ -3,6 +3,7 @@ layout: post
 title:  "WiFi WiFi Everywhere, even at 36,000 feet"
 date:   Wed, 27 Jul 2011 10:00:00 -0400
 category: blog
+published: false
 ---
 
 _OR_ **my Chromebook experience**
