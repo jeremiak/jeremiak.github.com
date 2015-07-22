@@ -28,6 +28,10 @@ a:hover {
   background-color:$accentColor;
   color:$backgroundColor;
 }
+.post .background-date {
+  color:$accentColor;
+  opacity: .2;
+}
 footer {
   background-color:$backgroundColor;
 }

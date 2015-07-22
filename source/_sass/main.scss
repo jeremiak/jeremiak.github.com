@@ -42,3 +42,13 @@ footer strong {
   padding-left:.3em;
   padding-right:.3em;
 }
+
+.post {
+  position: relative;
+}
+.post > * {
+  position: relative;
+}
+.post .background-date { 
+  position: absolute;
+}

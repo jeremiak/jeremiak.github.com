@@ -3,6 +3,7 @@ layout: post
 title:  "Recalling the Civil War, politically"
 date:   Tue, 19 Jul 2011 10:06:06 -0400
 category: blog
+published: false
 ---
 
 I remember learning about the Civil War in middle school; I know it by that

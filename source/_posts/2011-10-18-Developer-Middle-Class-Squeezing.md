@@ -3,6 +3,7 @@ layout: post
 title:  "Developer Middle Class Squeezing"
 date:   Tue, 18 Oct 2011 02:24:15 -0400
 category: blog
+published: false
 ---
 
 Hark back to the year 2008; do you remember what was different then? Sure, the

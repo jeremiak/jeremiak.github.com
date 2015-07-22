@@ -3,6 +3,7 @@ layout: post
 title:  "Valuing Games with Friends"
 date:   Fri, 29 Jul 2011 10:00:00 -0400
 category: blog
+published: false
 ---
 
 Since I’m on a Facebook tear right now, along with the rest of the world I

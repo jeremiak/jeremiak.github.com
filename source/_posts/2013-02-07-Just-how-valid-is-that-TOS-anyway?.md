@@ -3,6 +3,7 @@ layout: post
 title:  "Just how valid is that TOS anyway?"
 date:   Thu, 07 Feb 2013 01:22:50 -0500
 category: blog
+published: false
 ---
 
 I’m finally getting around to churning through some of my saved Pocket posts
