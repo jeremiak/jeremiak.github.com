@@ -1,6 +1,6 @@
 language: ruby
 script:
-- jekyll build
+- bundle exec jekyll build
 deploy:
   provider: s3
   skip_cleanup: true
