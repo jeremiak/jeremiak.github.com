@@ -8,6 +8,9 @@ timezone: America/Los_Angeles
 source: source
 destination: public
 
+exclude:
+  - vendor
+
 prose:
   rooturl: "_posts"
   media: "media"
