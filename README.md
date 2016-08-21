@@ -1,6 +1,4 @@
 # jeremiak.com
 Personal little corner of the internet
 
-[![Build Status](https://travis-ci.org/jeremiak/jeremiak.com.svg?branch=master)](https://travis-ci.org/jeremiak/jeremiak.com)
-
-
+[![CircleCI](https://circleci.com/gh/jeremiak/jeremiak.com/tree/master.svg?style=svg)](https://circleci.com/gh/jeremiak/jeremiak.com/tree/master)
