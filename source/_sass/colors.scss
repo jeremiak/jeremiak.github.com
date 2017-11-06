@@ -1,50 +1,23 @@
-$backgroundColor:White;
-$accentColor:MediumAquaMarine;
+.bg-pink {
+  background-color: $pink;
+}
 
-body {
-  background-color:$backgroundColor;
-  margin-top:20px;
+.bg-purple {
+  background-color: $purple;
 }
-body::before {
-  background-color:$accentColor;
-  min-height:.8rem;
-  width:100%;
-  position:fixed;
-  top:0;
-  left:0;
-  content:"";
-  cursor:pointer;
+
+.bg-teal {
+  background-color: $teal;
 }
-a, a:hover, a:visited {
-  color:$accentColor;
-  text-decoration:none;
-  border-bottom:2px solid $accentColor;
-  padding-bottom:0;
+
+.bg-white {
+  background-color: $white;
 }
-a:hover {
-  border-bottom-style:dotted;
+
+.bg-white-translucent {
+  background-color: rgba(255, 255, 255, 0.5);
 }
-.skill-list li {
-  background-color:$accentColor;
-  color:$backgroundColor;
-}
-.post .background-date {
-  color:$accentColor;
-  opacity: .2;
-}
-footer {
-  background-color:$backgroundColor;
-}
-footer .background-color {
-  background-color:black;
-  color:$backgroundColor;
-}
-footer .background-color:after {
-  content:"" + $backgroundColor;
-}
-footer .link-color {
-  color:$accentColor;
-}
-footer .link-color:after {
-  content:"" + $accentColor;
+
+.pink {
+  color: $pink;
 }

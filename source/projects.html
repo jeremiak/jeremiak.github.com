@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: projects/
+---
+
+<h1>Some things I have worked on:</h1>
+
+<ul class="list-style-none p0">
+{% for project in site.projects %}
+  <li>
+    <h2>{{ project.name }}</h2>
+    <p>{{ project.content }}</p>
+  </li>
+{% endfor %}
+</ul>

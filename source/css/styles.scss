@@ -3,12 +3,7 @@
 ---
 
 // Imports
-@import "mixins";
-@import "grid";
-@import "main";
-@import "images";
+@import "variables";
+@import "basscss/basscss";
 @import "colors";
 @import "fonts";
-@import "mobile";
-@import "helpers";
-@import "animations";

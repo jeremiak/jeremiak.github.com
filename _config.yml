@@ -3,32 +3,19 @@ url: www.jeremiak.com
 description: my things
 markdown: redcarpet
 highlighter: pygments
-timezone: America/Los_Angeles
+timezone: America/New_York
 
-source: source
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
 destination: public
-
 exclude:
   - vendor
-
-prose:
-  rooturl: "_posts"
-  media: "media"
-  metadata:
-    _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "date"
-        field:
-          element: "text"
-          label: "post date"
-      - name: "title"
-        field:
-          element: "text"
-      - name: "published"
-        field:
-          element: "checkbox"
-          label: "published"
-          value: true
+source: source
