@@ -1,6 +1,7 @@
 ---
 name: Cloud.gov dashboard
-url: https://cloud.gov
+href: https://cloud.gov
+order: 4
 ---
 
-Things can go here. Woot.
+An cloud based application management dashboard that enables Cloud Foundry users to manage their resources through a web UI.

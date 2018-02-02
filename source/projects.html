@@ -6,10 +6,11 @@ permalink: projects/
 <h1>Some things I have worked on:</h1>
 
 <ul class="list-style-none p0">
-{% for project in site.projects %}
+{% assign projects = site.projects | sort: "order" %}
+{% for project in projects %}
   <li>
     <p>
-      <a href="{{ project.url }}">{{ project.name }}</a>
+      <a href="{{ project.href }}">{{ project.name }}</a>
     </p>
     <p>{{ project.content }}</p>
   </li>

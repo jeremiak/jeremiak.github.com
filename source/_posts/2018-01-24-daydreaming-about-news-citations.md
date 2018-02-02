@@ -1,5 +1,5 @@
 ---
-title: A daydream about sourcing in news articles
+title: A daydream about citations in news articles
 ---
 
 I went searching for the Trump statement calling for a “complete and total shutdown” of Muslim immigration to America the other day and I was a bit dismayed by what I found. It certainly is not hard to find articles that cite a single line of the statement, or a few lines of it. It also is not super hard to find a video of Supreme Leader Cheeto Bandito himself reading a line or two from the statement.
@@ -10,7 +10,7 @@ Ultimately, we can use the Wayback Machine from the Internet Archive (and boy, i
 
 The web is a platform for many mediums, but the first and primary is text. And the web provides an amazing addition to written language: the hyperlink. This small HTML element connects sentences together across subjects, sources, and, indeed, the entire globe. It helps us document our inspiration and source our findings with incredible ease. It is an addition to written language that the last hundred generations could only dream about.
 
-So please, when you write something about anybody in power, but especially Donald Trump please **source your shit with links**. And better yet, provide multiple different links because your piece needs to last. If you’re unsure of what that means, might I recommend:
+So please, when you write something about anybody in power, but especially Donald Trump please **cite your shit with links**. And better yet, provide multiple different links because your piece needs to last. If you’re unsure of what that means, might I recommend:
 
 1. A link to the primary source
 1. A screenshot of the primary source (if that makes sense given your piece and the source)

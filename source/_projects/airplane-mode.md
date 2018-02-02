@@ -1,6 +1,7 @@
 ---
 name: airplane-mode
-url: https://npm.im/airplane-mode
+href: /posts/airplane-mode
+order: 10
 ---
 
-Yo
+An easy to use, HTTP proxy-and-cache for web development in situations where connectivity can be a bit spotty.

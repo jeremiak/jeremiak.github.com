@@ -16,7 +16,7 @@ Recent history is replete with examples of the US giving militants arms and supp
 
 Given all this, can we please agree that "terrorist" is a bad word that does nothing to further the debate about how we handle the very real national security challenges and foreign policy situations that we find ourselves in and will continue to find ourselves in?
 
-Perhaps we won't be able to get it all into a single word to be regurgitated constantly by the “news” media. That is OK. Political extremism and militantism is a complex issue that deserves a more nuanced debate. I won't be upset if we will have to use full sentences to describe suicide bombers in Mosul.
+Perhaps we won't be able to get it all into a single word to be regurgitated constantly by the "news" media. That is OK. Political extremism and militantism is a complex issue that deserves a more nuanced debate. I won't be upset if we will have to use full sentences to describe suicide bombers in Mosul.
 
 After all, would we not be better served if our news talked about these complex issues in reasonably complex terms? I applaud Tarik Kafala, the head of BBC Arabic, for refusing to called the Charlie Hebdo attackers "terrorists."
 

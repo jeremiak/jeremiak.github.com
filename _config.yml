@@ -7,7 +7,6 @@ timezone: America/New_York
 
 collections:
   projects:
-    output: true
     permalink: /projects/:path/
 defaults:
   - scope:
@@ -20,7 +19,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-permalink: /posts/:year/:title/
+permalink: /posts/:title/
 destination: public
 exclude:
   - vendor

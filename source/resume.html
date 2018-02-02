@@ -1,0 +1,52 @@
+---
+permalink: resume/
+---
+
+<h1>Jeremia Kimelman</h1>
+<p>Web developer who gives a shit</p>
+
+<h2>Professional experience</h2>
+<ul>
+  <li>
+    <div>
+      <p>Front end developer, 18F</p>
+      <p>June 2015 - Present</p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p>Fellow, Code for America</p>
+      <p>January 2014 - November 2014</p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p>Website developer, Self employed</p>
+      <p>December 2010 - June 2015</p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p>Director of product, Tout</p>
+      <p>April 2012 - November 2013</p>
+    </div>
+  </li>
+</ul>
+
+<h2>Education</h2>
+<ul>
+  <li>
+    <div>
+      <p>UC Davis</p>
+      <p>2010</p>
+    </div>
+  </li>
+</ul>
+
+<h2>Projects</h2>
+<ul>
+{% assign projects = site.projects | sort: "order" %}
+{% for project in projects %}
+  <li>{{ project.name }} - {{ project.href }}</li>
+{% endfor %}
+</ul>

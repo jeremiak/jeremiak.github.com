@@ -1,6 +1,7 @@
 ---
 name: Civic Quarterly
-url: https://www.civicquarterly.com
+href: https://www.civicquarterly.com
+order: 5
 ---
 
-Yo
+Civic Quarterly was a print and digital publication about transforming government with digital tools & design thinking. We made three beautiful issues before we decided to call it quits.
