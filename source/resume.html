@@ -1,52 +1,94 @@
 ---
+layout: default
 permalink: resume/
 ---
 
-<h1>Jeremia Kimelman</h1>
-<p>Web developer who gives a shit</p>
+<button class="print-hide" id="print">Print</button>
 
-<h2>Professional experience</h2>
-<ul>
-  <li>
-    <div>
-      <p>Front end developer, 18F</p>
-      <p>June 2015 - Present</p>
-    </div>
-  </li>
-  <li>
-    <div>
-      <p>Fellow, Code for America</p>
-      <p>January 2014 - November 2014</p>
-    </div>
-  </li>
-  <li>
-    <div>
-      <p>Website developer, Self employed</p>
-      <p>December 2010 - June 2015</p>
-    </div>
-  </li>
-  <li>
-    <div>
-      <p>Director of product, Tout</p>
-      <p>April 2012 - November 2013</p>
-    </div>
-  </li>
-</ul>
+<div class="resume">
+  <h1>Jeremia Kimelman</h1>
+  <p>Web developer who gives a shit</p>
 
-<h2>Education</h2>
-<ul>
-  <li>
-    <div>
-      <p>UC Davis</p>
-      <p>2010</p>
-    </div>
-  </li>
-</ul>
+  <h2>Core skills</h2>
+  <table>
+    <tr>
+      <th>Software development</th>
+      <th>Technical leadership</th>
+    </tr>
+    <tr>
+      <td>Full stack web development with an emphasis on writing testable, well documented, and open source.</td>
+      <td>Strong advocate for user oriented, maintainable technical solutions. Interested in building consensus through documented debate and prototypes.</td>
+    </tr>
+  </table>
 
-<h2>Projects</h2>
-<ul>
-{% assign projects = site.projects | sort: "order" %}
-{% for project in projects %}
-  <li>{{ project.name }} - {{ project.href }}</li>
-{% endfor %}
-</ul>
+  <h2>Professional experience</h2>
+  <ul>
+    <li>
+      <div>
+        <p>Front end developer, 18F</p>
+        <p>June 2015 - Present</p>
+      </div>
+      <p>The 18F engineering team is a distributed team that is responsible for delivering high quality, robust, open source software. I am an individual contributor to many projects for federal agency partners as well as a technical leader on my project teams. I advocate for performant interfaces, improved through quick iteration and frequent user testing.</p>
+      <ul>
+        <li>Developed accessible web applications in the open for the EPA, GSA, and the FBI.</li>
+        <li>Developed consumer-grade tools for managing hosted cloud applications, publishing web content, and accessing federal open data sets using a range of different Javascript tools and approaches.</li>
+        <li>Made framework and technical decisions as the lead front end developer for a number of projects, including the Crime Data Explorer.</li>
+        <li>Managed the technical relationship with the FBI to ensure the successful launch of their first open, cloud based web application and championed modifications to the FBI internal software security process to embrace open source.</li>
+        <li>Advocated for and led the implementation of agile principles such as continuous deployment and robust test coverage to allow for low cost, high confidence releases.</li>
+        <li>Managed the every two week release cycle for the FBI Crime Data Explorer project and generated human readable changelogs.</li>
+        <li>Spearheaded a successful effort to open source some of 18F's internal documentation.</li>
+        <li>Active member and contributor to the 18F front end team, leading workshops and discussions about modern techniques and web APIs and building consensus around a standard set of tools and practices.</li>
+        <li>Ensured that new hires at 18F were successfully onboarded and set up to be productive members of the 18F organization by treating the onboarding curriculum as a product and conducting user testing sessions and iterating on the program.</li>
+      </ul>
+    </li>
+    <li>
+      <div>
+        <p>Fellow, Code for America</p>
+        <p>January 2014 - November 2014</p>
+      </div>
+      <p>As a fellow with Code for America, I partnered with the City of Chattanooga to open and promote municipal data, prototype web applications built on top of that data, and explore ways to leverage technology and the community to improve the lives of city residents.</p>
+      <ul>
+        <li>Built Best Nest, an app that consumed newly-published datasets about residential buildings in the city to help low-income renters learn more about the properties they were interested in renting. The Best Nest client and API were both written in JavaScript and utilized MongoDB as the datastore.</li>
+        <li>Drafted Chattanooga’s first open data policy and advocated for the value of publishing the data in open and accessible formats, resulting in the publishing of a few dozen datasets and an inaugural open data inventory cataloging over 550 data sets within the city.</li>
+        <li>Conducted community outreach and organizing to create the Chattanooga Civic User Testing group that provides local app developers the opportunity to engage with fellow residents and receive first-hand feedback about their app design and function. Secured a grant from the local Benwood Foundation to ensure that the testers would be financially compensated for their time and input.</li>
+      </ul>
+    </li>
+    <li>
+      <div>
+        <p>Freelance website developer</p>
+        <p>December 2010 - June 2015</p>
+      </div>
+      <p>I have worked with a number of clients as a freelance full-stack web developer, helping them determine what technology product would best fit their needs and then designing and implementing the site based around the client’s goals and technical abilities.</p>
+      <ul>
+        <li>Designed and developed web apps using modern web development techniques and tools, such as browserify, npm, Sass/LESS and git.</li>
+        <li>Implemented various CMS systems for the clients based on my understanding of their technical proficiency and access, ranging from Wordpress to Jekyll to Google Docs.</li>
+        <li>Developed HTTP APIs written in Python and JavaScript.</li>
+      </li>
+    </li>
+    <li>
+      <div>
+        <p>Director of product, Tout</p>
+        <p>April 2012 - November 2013</p>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Education</h2>
+  <ul>
+    <li>
+      <div>
+        <p>UC Davis</p>
+        <p>Bachelor of Arts, International Relations and Worldwide Development</p>
+        <p>2010</p>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Projects</h2>
+  <ul>
+  {% assign projects = site.projects | sort: "order" %}
+  {% for project in projects %}
+    <li>{{ project.name }} - {{ project.href }}</li>
+  {% endfor %}
+  </ul>
+</div>
