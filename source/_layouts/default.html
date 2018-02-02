@@ -5,14 +5,14 @@
       <title>{{ page.title }}</title>
     </head>
     <body class="bg-yellow">
-      <nav class="print-hide">
-        <ul class="list-style-none">
-          <li><a href="/">Home</a></li>
-          <li><a href="/posts">Posts</a></li>
-          <li><a href="/projects">Projects</a></li>
+      <nav class="flex max-width-3 mx-auto row-reverse print-hide">
+        <ul class="clearfix list-style-none p0">
+          <li class="col mr2"><a href="/">Home</a></li>
+          <li class="col mr2"><a href="/posts">Posts</a></li>
+          <li class="col"><a href="/projects">Projects</a></li>
         </ul>
       </nav>
-      <div class="container px3">
+      <div class="max-width-3 mx-auto">
         <main>
           {{ content }}
         </main>

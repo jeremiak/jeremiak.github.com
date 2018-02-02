@@ -13,3 +13,9 @@ html {
 .strike {
   text-decoration: line-through;
 }
+
+@media print {
+  .print-fs-14 {
+    font-size: 14pt;
+  }
+}
