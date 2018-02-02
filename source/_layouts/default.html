@@ -4,9 +4,18 @@
       {% include head.html %}
       <title>{{ page.title }}</title>
     </head>
-    <body>
+    <body class="bg-yellow">
+      <nav>
+        <ul class="list-style-none">
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts">Posts</a></li>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </nav>
       <div class="container px3">
-        {{ content }}
+        <main>
+          {{ content }}
+        </main>
       </div>
       <footer>
 

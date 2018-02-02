@@ -1,6 +1,6 @@
 ---
 name: Cloud.gov dashboard
-layout: project
+url: https://cloud.gov
 ---
 
 Things can go here. Woot.

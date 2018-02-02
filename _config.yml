@@ -1,6 +1,6 @@
 name: jeremiak
 url: www.jeremiak.com
-description: my things
+description: just a small personal site
 markdown: redcarpet
 highlighter: pygments
 timezone: America/New_York
@@ -15,6 +15,12 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+permalink: /posts/:year/:title/
 destination: public
 exclude:
   - vendor

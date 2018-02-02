@@ -2,6 +2,14 @@ html {
   font-size: $root;
 }
 
+.light {
+  font-weight: 100;
+}
+
 .sans {
   font-family: $sans;
+}
+
+.strike {
+  text-decoration: line-through;
 }
