@@ -1,50 +1,15 @@
-$backgroundColor:White;
-$accentColor:MediumAquaMarine;
+.bg-yellow {
+  background-color: $yellow;
+}
 
-body {
-  background-color:$backgroundColor;
-  margin-top:20px;
+.gray {
+  color: $gray;
 }
-body::before {
-  background-color:$accentColor;
-  min-height:.8rem;
-  width:100%;
-  position:fixed;
-  top:0;
-  left:0;
-  content:"";
-  cursor:pointer;
+
+.blue {
+  color: $blue;
 }
-a, a:hover, a:visited {
-  color:$accentColor;
-  text-decoration:none;
-  border-bottom:2px solid $accentColor;
-  padding-bottom:0;
-}
-a:hover {
-  border-bottom-style:dotted;
-}
-.skill-list li {
-  background-color:$accentColor;
-  color:$backgroundColor;
-}
-.post .background-date {
-  color:$accentColor;
-  opacity: .2;
-}
-footer {
-  background-color:$backgroundColor;
-}
-footer .background-color {
-  background-color:black;
-  color:$backgroundColor;
-}
-footer .background-color:after {
-  content:"" + $backgroundColor;
-}
-footer .link-color {
-  color:$accentColor;
-}
-footer .link-color:after {
-  content:"" + $accentColor;
+
+.teal {
+  color: $teal;
 }

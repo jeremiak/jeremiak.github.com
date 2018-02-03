@@ -1,34 +1,26 @@
 name: jeremiak
 url: www.jeremiak.com
-description: my things
+description: just a small personal site
 markdown: redcarpet
 highlighter: pygments
-timezone: America/Los_Angeles
+timezone: America/New_York
 
-source: source
+collections:
+  projects:
+    permalink: /projects/:path/
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+permalink: /posts/:title/
 destination: public
-
 exclude:
   - vendor
-
-prose:
-  rooturl: "_posts"
-  media: "media"
-  metadata:
-    _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "date"
-        field:
-          element: "text"
-          label: "post date"
-      - name: "title"
-        field:
-          element: "text"
-      - name: "published"
-        field:
-          element: "checkbox"
-          label: "published"
-          value: true
+source: source

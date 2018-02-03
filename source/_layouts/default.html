@@ -4,17 +4,20 @@
       {% include head.html %}
       <title>{{ page.title }}</title>
     </head>
-    <body>
-        <div class="container">
+    <body class="bg-yellow">
+      <nav class="flex max-width-3 mx-auto row-reverse print-hide">
+        <ul class="clearfix list-style-none p0">
+          <li class="col mr2"><a href="/">Home</a></li>
+          <li class="col mr2"><a href="/posts">Posts</a></li>
+          <li class="col"><a href="/projects">Projects</a></li>
+        </ul>
+      </nav>
+      <div class="max-width-3 mx-auto">
+        <main>
           {{ content }}
-        </div>
-        <footer>
-          <ul>
-            <li>the background color is <strong class="background-color"></strong></li>
-            <li>the accent color is <strong class="link-color"></strong></li>
-          </ul>
-        </footer>
-
-        {% include javascript.html %}
+        </main>
+      </div>
+      <footer></footer>
+      {% include javascript.html %}
     </body>
 </html>
