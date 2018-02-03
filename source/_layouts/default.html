@@ -4,12 +4,12 @@
       {% include head.html %}
       <title>{{ page.title }}</title>
     </head>
-    <body class="bg-yellow">
+    <body class="bg-yellow border border-gold border-10 mh100 m0 p1 sm-p2 md-px4 col-12">
       <nav class="flex max-width-3 mx-auto row-reverse print-hide">
-        <ul class="clearfix list-style-none p0">
-          <li class="col mr2"><a href="/">Home</a></li>
-          <li class="col mr2"><a href="/posts">Posts</a></li>
-          <li class="col"><a href="/projects">Projects</a></li>
+        <ul class="flex flex-column sm-flex-row list-style-none m0 p0">
+          <li class="mb1 mr1"><a href="/">Home</a></li>
+          <li class="mb1 mr1"><a href="/articles">Articles</a></li>
+          <li><a href="/projects">Projects</a></li>
         </ul>
       </nav>
       <div class="max-width-3 mx-auto">
@@ -17,7 +17,9 @@
           {{ content }}
         </main>
       </div>
-      <footer></footer>
+      <footer class="center">
+
+      </footer>
       {% include javascript.html %}
     </body>
 </html>

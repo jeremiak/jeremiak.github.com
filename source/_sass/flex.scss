@@ -5,3 +5,13 @@
 .space-between {
   justify-content: space-between;
 }
+
+@media #{$breakpoint-sm} {
+  .sm-flex-row {
+    flex-direction: row;
+  }
+
+  .sm-row-reverse {
+    flex-direction: row-reverse;
+  }
+}

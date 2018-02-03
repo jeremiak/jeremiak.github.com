@@ -1,13 +1,24 @@
 // colors
-
+$black: black;
+$blue: #c8d0f7;
+$gold: gold;
+$gray: #545353;
 $red: red;
 $teal: #45a896;
 $white: white;
 $yellow: #f9f5e0;
-$gray: #545353;
-$blue: #c8d0f7;
-$black: black;
-// fonts
 
+// fonts
 $root: 21pt;
 $sans: monospace;
+
+// breakpoints
+$breakpoint-sm: '(min-width: 40em)' !default;
+$breakpoint-md: '(min-width: 52em)' !default;
+$breakpoint-lg: '(min-width: 64em)' !default;
+
+//
+$space-1: .5rem !default;
+$space-2: 1rem !default;
+$space-3: 2rem !default;
+$space-4: 4rem !default;

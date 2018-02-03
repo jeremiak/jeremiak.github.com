@@ -1,14 +1,14 @@
 ---
 layout: default
-permalink: posts/
+permalink: articles/
 ---
 
-<h1>Some things I have written:</h1>
+<h1><span class="strike">Articles</span> Rants & Ramblings</h1>
 
 <ul class="list-style-none p0">
 {% for post in site.posts %}
   <li class="bg-white mb2 px2 py1">
-    <div class="flex space-between">
+    <div class="flex flex-column sm-flex-row space-between">
       <p class="h3 m0"><a href="{{ post.url }}">{{ post.title }}</a></p>
       <p class="m0 italic">written on {{ post.date | date_to_string }}</p>
     </div>
