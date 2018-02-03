@@ -9,7 +9,7 @@ title: Projects
 <ul class="list-style-none p0">
 {% assign projects = site.projects | sort: "order" %}
 {% for project in projects %}
-  <li class="bg-white mb2 px2 py1">
+  <li class="bg-white mb2 p1 sm-p2">
     <p class="h3 m0"><a href="{{ project.href }}">{{ project.name }}</a></p>
     {{ project.content }}
   </li>
