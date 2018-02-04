@@ -7,12 +7,14 @@
 @import "basscss/basscss";
 @import "borders";
 @import "colors";
+@import "cursor";
 @import "display";
 @import "flex";
 @import "fonts";
 @import "height";
 @import "margin";
 @import "padding";
+@import "position";
 
 * {
   box-sizing: border-box;

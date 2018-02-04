@@ -10,3 +10,9 @@
     padding-right: $space-4;
   }
 }
+
+@media print {
+  .pr-p0 {
+    padding: 0;
+  }
+}
