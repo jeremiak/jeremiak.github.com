@@ -37,6 +37,13 @@ a {
   text-decoration: none;
 }
 
+@media print {
+  a {
+    padding: 0;
+    text-decoration: underline;
+  }
+}
+
 a:hover {
   background-color: transparent;
   border-color: $gold;
