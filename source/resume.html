@@ -8,25 +8,26 @@ title: Jeremia Kimelman's resume
   Print
 </button>
 
-<div class="resume pr-fs-12">
-  <div class="flex items-center space-between mt2 pr-mt0">
-    <h1 class="my0">Jeremia Kimelman</h1>
-    <p class="my0">Web developer and technical leader who is passionate about using open technology to drive positive social change.</p>
+<div class="resume fs-14 pr-fs-12">
+  <div class="mt2 pr-mt0">
+    <h1 class="h3 my0">Jeremia Kimelman</h1>
+    <p class="mt1 mb0">Web developer and technical leader who is passionate about using open technology to drive positive social change.</p>
   </div>
 
-  <h2 class="mb0 mt1">Core skills</h2>
-  <table>
-    <tr>
-      <th>Software development</th>
-      <th>Technical leadership</th>
-    </tr>
-    <tr>
-      <td class="col-6">Full stack web development with an emphasis on writing testable, well documented, and open source code.</td>
-      <td class="col-6">Strong advocate for user oriented, maintainable technical solutions. Interested in building consensus through documented debate and prototypes.</td>
-    </tr>
-  </table>
+  <h2 class="mb0 mt1 h4">Core skills</h2>
 
-  <h2 class="mb0 mt1">Professional experience</h2>
+  <div>
+    <div class="clearfix mt1">
+      <h3 class="col col-3 my0">Software development</h3>
+      <p class="col col-9 my0">Full stack web development with an emphasis on writing testable, well documented, and open source code.</p>
+    </div>
+    <div class="clearfix mt1">
+      <h3 class="col col-3 my0">Technical leadership</h3>
+      <p class="col col-9 my0">Strong advocate for user oriented, maintainable technical solutions. Interested in building consensus through documented debate and prototypes.</p>
+    </div>
+  <div>
+
+  <h2 class="mb0 mt1 h4">Professional experience</h2>
   <ul class="list-style-none p0 mt0">
     <li>
       <div class="flex flex-end space-between">
@@ -36,14 +37,14 @@ title: Jeremia Kimelman's resume
       <p class="mt0 mb1">The 18F engineering team is a distributed team that is responsible for delivering high quality, robust, open source software. I am an individual contributor to many projects for federal agency partners as well as a technical leader on my project teams. I advocate for performant interfaces, improved through quick iteration and frequent user testing.</p>
       <ul>
         <li>Developed accessible web applications in the open for the EPA, GSA, and the FBI.</li>
-        <li>Developed consumer-grade tools for managing hosted cloud applications, publishing web content, and accessing federal open data sets using a range of different Javascript tools and approaches.</li>
-        <li>Made framework and technical decisions as the lead front end developer for a number of projects, including the Crime Data Explorer.</li>
-        <li>Managed the technical relationship with the FBI to ensure the successful launch of their first open, cloud based web application and championed modifications to the FBI internal software security process to embrace open source.</li>
+        <li>Developed consumer-grade tools for managing hosted cloud applications, publishing web content, and accessing federal open data sets using a range of different Javascript libraries and approaches.</li>
+        <li>Made framework and technical decisions as the lead front end developer for a number of projects, including the Crime Data Explorer developed in partnership with the FBI.</li>
+        <li>Managed the technical relationship with the FBI to ensure the successful launch of their first open, cloud based web application and championed modifications to the agency's internal software security process to embrace open source.</li>
         <li>Advocated for and led the implementation of agile principles such as continuous deployment and robust test coverage to allow for low cost, high confidence releases.</li>
-        <li>Managed the every two week release cycle for the FBI Crime Data Explorer project and generated human readable changelogs.</li>
+        <li>Managed the release cycle for the Crime Data Explorer project and generated human readable changelogs every two weeks.</li>
         <li>Spearheaded a successful effort to open source some of 18F's internal documentation.</li>
-        <li>Active member and contributor to the 18F front end team, leading workshops and discussions about modern techniques and web APIs and building consensus around a standard set of tools and practices.</li>
-        <li>Ensured that new hires at 18F were successfully onboarded and set up to be productive members of the 18F organization by treating the onboarding curriculum as a product and conducting user testing sessions and iterating on the program.</li>
+        <li>Active member and contributor to the 18F front end team, leading workshops, trainings, and discussions about modern techniques, web APIs and building consensus around a standard set of tools and practices.</li>
+        <!-- <li>Ensured that new hires at 18F were successfully onboarded and set up to be productive members of the organization by treating the onboarding curriculum as a product and conducting user testing sessions and iterating on the program.</li> -->
       </ul>
     </li>
     <li>
@@ -67,7 +68,7 @@ title: Jeremia Kimelman's resume
       <ul>
         <li>Designed and developed web apps using modern web development techniques and tools, such as browserify, npm, Sass/LESS and git.</li>
         <li>Implemented various CMS systems for the clients based on my understanding of their technical proficiency and access, ranging from Wordpress to Jekyll to Google Docs.</li>
-        <li>Developed HTTP APIs written in Python and JavaScript.</li>
+        <li>Developed HTTP APIs written in Python and JavaScript using Flask, Django, and ExpressJS.</li>
       </ul>
     </li>
     <li>
@@ -84,7 +85,7 @@ title: Jeremia Kimelman's resume
     </li>
   </ul>
 
-  <h2 class="mb0 mt1">Education</h2>
+  <h2 class="h4 mb0 mt1">Education</h2>
   <ul class="list-style-none pl0">
     <li>
       <div>
@@ -94,7 +95,7 @@ title: Jeremia Kimelman's resume
   </ul>
 
   <div class="hide">
-    <h2 class="mb0 mt1">Projects</h2>
+    <h2 class="h4 mb0 mt1">Projects</h2>
     <ul>
     {% assign projects = site.projects | sort: "order" %}
     {% for project in projects %}
@@ -103,17 +104,27 @@ title: Jeremia Kimelman's resume
     </ul>
   </div>
 
-  <h2 class="mb0 mt1">Technical skills</h2>
+  <h2 class="h4 mb0 mt1">Technical skills</h2>
+  <ul class="clearfix list-style-none mt1 pl0">
+    <li class="col comma-after">Web application development</li>
+    <li class="col comma-after">Javascript for the browser and the server</li>
+    <li class="col comma-after">using and building HTTP APIs</li>
+    <li class="col comma-after">CSS and web animation</li>
+    <li class="col comma-after">React</li>
+    <li class="col comma-after">Redux</li>
+    <li class="col comma-after">D3</li>
+    <li class="col comma-after">Docker</li>
+    <li class="col comma-after">Django</li>
+    <li class="col comma-after">Jekyll</li>
+    <li class="col">managing automated deployment pipelines</li>
+  </ul>
+
+  <h2 class="h4 mb0 mt1">Technical values</h2>
   <ul class="list-style-none mt1 pl0">
-    <li>Web application development</li>
-    <li>Javascript for the browser and the server</li>
-    <li>CSS</li>
-    <li>React, Redux, and D3</li>
-    <li>responsive design</li>
-    <li>git and version control</li>
-    <li>automated deployments</li>
-    <li>Docker</li>
-    <li>website performance</li>
-    <li>HTTP APIs</li>
+    <li class="col comma-after">User centered</li>
+    <li class="col comma-after">responsive design</li>
+    <li class="col comma-after">performance budgets</li>
+    <li class="col comma-after">accessiblity for everyone</li>
+    <li class="col">secure by default</li>
   </ul>
 </div>
