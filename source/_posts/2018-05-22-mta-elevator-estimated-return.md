@@ -23,33 +23,8 @@ The reality is that even if the estimates are right, for the tens of thousands o
 I'm still exploring this dataset of elevator outages and the robots are hard at work scraping more information. If you have any questions that this data might be able to help answer don't hesitate to drop me a line.
 
 <style>
-  .no-js-msg {
-    display: none;
-  }
-  .chart-container.no-js .no-js-msg {
-    display: block;
-  }
-  .no-js .chart,
-  .no-js .caption {
-    display: none;
-  }
-
   .outage line.selected {
     stroke: yellow;
-  }
-
-  .axis {
-    font-family: monospace;
-  }
-
-  .y-axis line {
-    stroke: grey;
-    stroke-dasharray: 5 3;
-  }
-
-  .y-axis text {
-    fill: grey;
-    font-size: 10pt;
   }
 
   .caption {
