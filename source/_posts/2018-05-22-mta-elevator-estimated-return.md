@@ -32,7 +32,7 @@ I'm still exploring this dataset of elevator outages and the robots are hard at 
   }
 </style>
 
-<script src="/js/d3.v5.min.js"></script>
+<script src="/js/lib/d3.v5.min.js"></script>
 <script src="/js/util.js"></script>
-<script src="/js/elevator-outage-estimates.js"></script>
+<script src="/js/posts/elevator-outage-estimates.js"></script>
 <!-- <script src="/js/elevator-outages-frequent.js"></script> -->

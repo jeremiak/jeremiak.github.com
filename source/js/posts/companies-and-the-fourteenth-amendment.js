@@ -1,46 +1,47 @@
-;(function(window) {
-  const height = 500
-  const width = 800
-  const margin = { x: 100, y: 100 }
+(function(window) {
+  const height = 500;
+  const margin = { x: 100, y: 100 };
+  const scroller = scrollama();
+  const width = d3.select(".chart-container").node().clientWidth;
 
-  d3.selectAll(".no-js").classed("no-js", false)
+  d3.selectAll(".no-js").classed("no-js", false);
 
   const $svg = d3
     .select(".chart")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
+    .attr("height", height);
 
   d3.csv("/data/parties-to-fourteenth-amendment-cases-1872-1910.csv")
     .then(data => {
-      const years = []
-      const opinions = []
+      const years = [];
+      const opinions = [];
       data.forEach(d => {
-        years.push(+d["October Term"])
-        opinions.push(+d["Total opinions"])
-      })
+        years.push(+d["October Term"]);
+        opinions.push(+d["Total opinions"]);
+      });
 
       const xScale = d3
         .scaleLinear()
         .domain(d3.extent(years))
-        .range([0 + margin.x, width - margin.x])
+        .range([0 + margin.x, width - margin.x]);
       const yScale = d3
         .scaleLinear()
         .domain(d3.extent(opinions))
-        .range([height - margin.y, 0 + margin.y])
+        .range([height - margin.y, 0 + margin.y]);
 
       const lineGenerator = d3
         .line()
         .x(d => xScale(d.year))
         .y(d => yScale(d.count))
-        .curve(d3.curveCatmullRom.alpha(0.5))
+        .curve(d3.curveCatmullRom.alpha(0.5));
 
       const colors = {
         "total-opinions": "black",
-        "african-americans": "blue",
-        individuals: "green",
-        corporations: "purple"
-      }
+        "african-americans": "black",
+        individuals: "black",
+        corporations: "black"
+      };
 
       const lines = [
         "Total opinions",
@@ -53,30 +54,30 @@
           year: +d["October Term"],
           count: +d[key]
         }))
-      }))
+      }));
 
       const $yAxis = $svg
         .append("g")
         .attr("class", "axis y-axis")
         .attr("transform", `translate(${margin.x * 0.75}, 0)`)
-        .call(d3.axisLeft(yScale))
+        .call(d3.axisLeft(yScale));
 
       $yAxis
         .append("text")
         .attr("transform", `rotate(270) translate(-120, -${margin.x / 2})`)
-        .text("Cases involving the 14th amendment")
+        .text("Cases involving the 14th amendment");
 
-      const xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"))
+      const xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
       const $xAxis = $svg
         .append("g")
         .attr("class", "axis y-axis")
         .attr("transform", `translate(0, ${height - margin.y / 1.25})`)
-        .call(xAxis)
+        .call(xAxis);
 
       $xAxis
         .append("text")
         .attr("transform", `translate(${width / 2}, ${margin.y / 2})`)
-        .text("Year")
+        .text("Year");
 
       const $paths = $svg
         .append("g")
@@ -88,16 +89,16 @@
         .attr("id", d => kebab(d.key))
         .attr("d", d => lineGenerator(d.values))
         .attr("stroke", "none")
-        .attr("fill", "none")
+        .attr("fill", "none");
 
       function animateLine(id) {
-        const $path = d3.select(`#${id}`)
-        const pathLength = $path.node().getTotalLength()
-        const data = $path.datum()
-        const finalColor = colors[id]
-        const last = data.values.pop()
-        const textX = xScale(last.year)
-        const textY = yScale(last.count)
+        const $path = d3.select(`#${id}`);
+        const pathLength = $path.node().getTotalLength();
+        const data = $path.datum();
+        const finalColor = colors[id];
+        const last = data.values.pop();
+        const textX = xScale(last.year);
+        const textY = yScale(last.count);
 
         $path
           .attr("stroke", "gold")
@@ -105,13 +106,13 @@
           .attr("stroke-dashoffset", pathLength)
           .transition()
           .duration(2000)
-          .attr("stroke-dashoffset", 0)
+          .attr("stroke-dashoffset", 0);
 
         $path
           .transition()
           .delay(2000)
           .duration(500)
-          .attr("stroke", finalColor)
+          .attr("stroke", finalColor);
 
         $svg
           .select("#lines")
@@ -125,16 +126,27 @@
           .transition()
           .delay(2100)
           .duration(200)
-          .attr("opacity", 1)
+          .attr("opacity", 1);
       }
 
-      lines.forEach((line, i) => {
-        setTimeout(() => {
-          animateLine(kebab(line.key))
-        }, i * 2500)
-      })
+      const animated = {};
+      scroller
+        .setup({
+          step: ".step",
+          container: ".container",
+          graphic: ".chart-container"
+        })
+        .onStepEnter(e => {
+          // debugger;
+          const line = e.element.dataset.line;
+          console.log({ e });
+          if (e.direction === "up") return;
+          if (animated[line]) return;
+          animateLine(line);
+          animated[line] = true;
+        });
     })
     .catch(e => {
-      console.error("Uh oh", e)
-    })
-})(window)
+      console.error("Uh oh", e);
+    });
+})(window);
