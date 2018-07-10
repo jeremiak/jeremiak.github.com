@@ -21,21 +21,6 @@
         opinions.push(+d["Total opinions"]);
       });
 
-      const xScale = d3
-        .scaleLinear()
-        .domain(d3.extent(years))
-        .range([0 + margin.x, width - margin.x]);
-      const yScale = d3
-        .scaleLinear()
-        .domain(d3.extent(opinions))
-        .range([height - margin.y, 0 + margin.y]);
-
-      const lineGenerator = d3
-        .line()
-        .x(d => xScale(d.year))
-        .y(d => yScale(d.count))
-        .curve(d3.curveCatmullRom.alpha(0.5));
-
       const colors = {
         "total-opinions": "black",
         "african-americans": "black",
@@ -50,11 +35,36 @@
         "Corporations"
       ].map(key => ({
         key,
-        values: data.map(d => ({
-          year: +d["October Term"],
-          count: +d[key]
-        }))
+        values: data.map((d, i) => {
+          const other = data.slice(0, i + 1);
+          const year = +d["October Term"];
+          console.log(key, year, i, other);
+          const count = +d[key];
+          const total = d3.sum(other, dd => +dd[key]);
+          return { count, total, year };
+        })
       }));
+
+      console.log({ lines });
+
+      const total = lines
+        .find(l => l.key === "Total opinions")
+        .values.map(d => d.total);
+
+      const xScale = d3
+        .scaleLinear()
+        .domain(d3.extent(years))
+        .range([0 + margin.x, width - margin.x]);
+      const yScale = d3
+        .scaleLinear()
+        .domain(d3.extent(total))
+        .range([height - margin.y, 0 + margin.y]);
+
+      const lineGenerator = d3
+        .line()
+        .x(d => xScale(d.year))
+        .y(d => yScale(d.total))
+        .curve(d3.curveCatmullRom.alpha(0.5));
 
       const $yAxis = $svg
         .append("g")
@@ -64,8 +74,8 @@
 
       $yAxis
         .append("text")
-        .attr("transform", `rotate(270) translate(-120, -${margin.x / 2})`)
-        .text("Cases involving the 14th amendment");
+        .attr("transform", `rotate(270) translate(-80, -${margin.x / 2})`)
+        .text("Cases involving the 14th amendment since 1872");
 
       const xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
       const $xAxis = $svg
@@ -97,8 +107,8 @@
         const data = $path.datum();
         const finalColor = colors[id];
         const last = data.values.pop();
-        const textX = xScale(last.year);
-        const textY = yScale(last.count);
+        const textX = xScale(last.year - 5);
+        const textY = yScale(last.total + 10);
 
         $path
           .attr("stroke", "gold")
