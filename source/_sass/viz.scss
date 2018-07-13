@@ -2,6 +2,16 @@
   font-family: monospace;
 }
 
+.axis line {
+  stroke: grey;
+  stroke-dasharray: 5 3;
+}
+
+.axis text {
+  fill: grey;
+  font-size: 10pt;
+}
+
 .no-js-msg {
   display: none;
 }
@@ -19,12 +29,12 @@
   stroke: $yellow;
 }
 
-.y-axis line {
-  stroke: grey;
-  stroke-dasharray: 5 3;
+.x-axis .tick:nth-child(odd) {
+  visibility: hidden;
 }
 
-.y-axis text {
-  fill: grey;
-  font-size: 10pt;
+@media #{$breakpoint-sm} {
+  .x-axis .tick:nth-child(odd) {
+    visibility: visible;
+  }
 }
