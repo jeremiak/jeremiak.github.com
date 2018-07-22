@@ -19,7 +19,17 @@ html {
 }
 
 .strike {
-  text-decoration: line-through;
+  position: relative;
+}
+
+.strike::before {
+  border-bottom: .14em solid $black;
+  content: '';
+  display: block;
+  position: absolute;
+  top: .45em;
+  transform: skewX(-30deg);
+  width: 100%;
 }
 
 .fs-14 {
