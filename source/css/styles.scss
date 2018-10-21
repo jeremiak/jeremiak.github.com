@@ -52,6 +52,12 @@ a:hover {
   border-style: dashed;
 }
 
+a.no-hover:hover {
+  background-color: transparent;
+  border-style: solid;
+  border-color: transparent;
+}
+
 blockquote {
   background-color: $white;
   border-left: 5px solid $gold;
