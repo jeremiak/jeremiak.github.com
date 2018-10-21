@@ -13,11 +13,13 @@ This data set only contains information about elevators and has no notion of esc
 ## Data
 The data is available as a CSV and contains a row for each observed elevator outage.
 
-<p class="center">
+<div class="center">
   <a 
   class="p1"
   href="https://s3.amazonaws.com/nyc-mta-elevator-outages/mta_elevator_outages.csv">Download the CSV</a>
-</p>
+  <p class="h6 italic" id="js-data-last-updated"></p>
+</div>
+
 
 ### Data dictionary
 * `elevator_mta_id` - Elevator ID used on outage reporting site
@@ -43,3 +45,14 @@ Please use this data! Its basically pulled straight from the MTA elevator outage
 </a>
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+<script>
+  var updatedEl = document.querySelector('#js-data-last-updated')
+  var url = 'https://s3.amazonaws.com/nyc-mta-elevator-outages/mta_elevator_outages.csv'
+  fetch(url, { method: 'HEAD' }).then(response => {
+    var lastModifiedHeader = response.headers.get('Last-Modified')
+    var lastModifiedDate = new Date(lastModifiedHeader)
+    var lastModified = lastModifiedDate.toLocaleDateString('en-us')
+    updatedEl.innerText = 'Last updated on ' + lastModified
+  })
+</script>
