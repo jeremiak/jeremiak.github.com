@@ -67,19 +67,19 @@
       const $yAxis = $svg
         .append("g")
         .attr("class", "axis y-axis")
-        .attr("transform", `translate(${margin.x * 0.75}, 0)`)
+        .attr("transform", `translate(${margin.x * .95}, 0)`)
         .call(d3.axisLeft(yScale))
 
       $yAxis
         .append("text")
-        .attr("transform", `rotate(270) translate(-80, -${margin.x / 2})`)
+        .attr("transform", `rotate(270) translate(-10, -${margin.x / 2})`)
         .text("Cases involving the 14th amendment since 1872")
 
       const xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"))
       const $xAxis = $svg
         .append("g")
         .attr("class", "axis x-axis")
-        .attr("transform", `translate(0, ${height - margin.y / 1.25})`)
+        .attr("transform", `translate(0, ${height - margin.y * .95})`)
         .call(xAxis)
 
       $xAxis

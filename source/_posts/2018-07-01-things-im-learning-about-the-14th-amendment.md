@@ -1,8 +1,10 @@
 ---
-title: Companies and the 14th amendment
+title: Things I'm learning about the 14th amendment
 ---
 
-Even before these last few weeks of horrendous news from the Supreme Court, I've been thinking about the institution quite a bit recently because I am reading "We the Corporations: How American businesses won their civil rights" by Adam Winkler. He chronicles the history of the ever expanding rights granted to corporations by the Supreme Court. Though the recent (and _very shitty_) Citizens United decision gives corporations the right to freely spend on domestic political elections, companies have been exploiting the 14th Amendment since nearly its ratification.
+I've been thinking about the Supreme Court recently, even before these last few months of horrendous news such as Trump's second appointment and the Janus ruling, because I am reading "We the Corporations: How American businesses won their civil rights" by Adam Winkler. He chronicles the history of the ever expanding rights granted to corporations by the Supreme Court. Though the recent (and _very shitty_) Citizens United decision gives corporations the right to freely spend on domestic political elections, companies have been exploiting the 14th Amendment since nearly its ratification.
+
+Winkler tells of perhaps the original sin when one of the authors of the 14th Amendment, the only living one at the time, lied about the purpose of the legislation for the benefit of his employer at the time, the Southern Pacific Railroad.
 
 The 14th Amendment, originally drafted to extend rights to former slaves, was passed following the Civil War. Perhaps predictably, because this is America: the land of the dollar, corporations started to use their massive bank accounts to fight for the rights of "artificial" persons. In fact, Winkler cites a startling, albeit brief, finding from a long dead law librarian of Congress named Charles Wallace Collins about the types of parties involved in cases related to the 14th amendment. Collins analyzed all the 14th amendment cases between 1872 and 1910 and found that corporations brought the overwhelming number of cases before the Court.
 
