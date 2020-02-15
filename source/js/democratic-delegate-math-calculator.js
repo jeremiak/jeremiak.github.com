@@ -2,12 +2,12 @@
   let delegates = 50
   const formatNumber = d3.format(',')
   const results = [
-    { name: 'Joe Biden', votes: 100 },
-    { name: 'Mike Bloomberg', votes: 100 },
-    { name: 'Pete Buttigieg', votes: 100 },
     { name: 'Amy Klobuchar', votes: 100 },
     { name: 'Bernie Sanders', votes: 100 },
     { name: 'Elizabeth Warren', votes: 100 },
+    { name: 'Joe Biden', votes: 100 },
+    { name: 'Mike Bloomberg', votes: 100 },
+    { name: 'Pete Buttigieg', votes: 100 },
   ]
 
   const bloombergLoadButton = d3.select('#load-bloomberg-scenario')
@@ -134,7 +134,10 @@
     <p>Then they'd get the following number of delegates:</p>
     <ul>${delegatesList.join('')}</ul>
 
-    <p>And the following candidates would get no delegates, as they didn't clear the 15% threshold:</p>
+    <p>${belowThresholdList.length > 0
+      ? 'And the following candidates would get no delegates, as they didn\'t clear the 15% threshold:'
+      : 'All of the candidates cleared the threshold.'}
+    </p>
     <ul>${belowThresholdList.join('')}</ul>
     `)
   }
@@ -143,11 +146,30 @@
   bloombergLoadButton.on('click', () => {
     results.forEach(result => {
       const { name } = result
-      if (name.includes('Bloomberg')) result.votes = 33333
+      let votes = 20000
+      if (name.includes('Bloomberg')) votes = 33333
+     
+      result.votes = votes
     })
+
+    d3.selectAll('input[data-candidate]')
+      .each(function(d) {
+        let value = 20000
+        if (d.name.includes('Bloomberg')) {
+          value = 33333
+        }
+
+        d3.select(this).attr('value', value)
+      })
     update()
   })
   bloombergAddVoteButton.on('click', () => {
+    results.forEach(result => {
+      const { name } = result
+      if (name.includes('Bloomberg')) result.votes = 33334
+    })
 
+    d3.select('input[data-candidate="Mike Bloomberg"]').attr('value', 33334)
+    update()
   })
 })()

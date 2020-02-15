@@ -11,6 +11,27 @@ So small flucations within an election can matter for the eventual delegate coun
 Go on, give it a whirl.
 
 <style>
+  button {
+    background-color: gold;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+    color: black;
+    cursor: pointer;
+    display: block;
+    font-family: serif;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    text-decoration: none;
+  }
+
+  button:hover {
+    background-color: transparent;
+    border: 3px dashed gold;
+  }
+
   details {
     background-color: #ebebeb;
     margin-bottom: 1rem;
@@ -47,9 +68,9 @@ We're starting with an assumption that each candidate got 100 votes and that the
 <details>
 <summary>If you're done playing around or looking for a place to start, expand this section to see something I find interesting.</summary>
 
-<p>Let's assume that everybody's doing reasonably well and getting 20,000 votes. Except one candidate is clearly leading, let's say that Bloomberg bought enough ad space and paid enough influencers to garner 33,333 votes.</p>
+<p>Let's assume that everybody's doing reasonably well and getting 20,000 votes. Except one candidate is clearly leading. Imagine that Bloomberg bought enough ad space and paid enough influencers to garner 33,333 votes.</p>
 
-<button class="db" id="load-bloomberg-scenario">Make it so</button>
+<button class="db" id="load-bloomberg-scenario">Make it so!</button>
 
 <p>Well, that's all well and good and everybody's getting some delegates, though Mike is winning in the vote count and therefore is also winning in the delegate race. He gets 12 while everybody else is getting 8.</p>
 
