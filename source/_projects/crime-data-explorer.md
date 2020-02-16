@@ -1,7 +1,7 @@
 ---
 name: Crime Data Explorer
 href: https://crime-data-explorer.fr.cloud.gov
-order: 3
+order: 30
 ---
 
 The Crime Data Explorer makes nationwide crime data accessible to a wide range of users. View trends, download bulk datasets, and access the Crime Data API for reported crime at the national, state, and agency levels.

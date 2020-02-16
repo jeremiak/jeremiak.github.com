@@ -19,7 +19,18 @@ html {
 }
 
 .strike {
-  text-decoration: line-through;
+  position: relative;
+}
+
+.strike::before {
+  background-color: black;
+  content: ' ';
+  display: block;
+  height: .1em;
+  left: 0;
+  position: absolute;
+  top: calc(50% - .1em);
+  width: 100%;
 }
 
 .fs-14 {

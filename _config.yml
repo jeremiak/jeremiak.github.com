@@ -19,8 +19,10 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-permalink: /articles/:title/
+permalink: /blog/:title/
 destination: public
 exclude:
   - vendor
 source: source
+gems:
+  - jekyll-feed

@@ -1,5 +1,5 @@
 ---
-name: Mapping control of the US House
+name: Mapping control of the US House in the 2018 midterms
 href: https://www.nbcnews.com/politics/elections/mapping-race-control-house-n906076
 order: 1
 ---
