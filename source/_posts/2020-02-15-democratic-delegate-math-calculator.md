@@ -2,13 +2,17 @@
 title: Dizzying Democratic delegate... math
 ---
 
-Elections in this country are weird. So many of our elections aren't measured in the number of people who vote for a candidate but instead are measured in how many points a campaign can score. The nature of the points changes and the most famous example is the Electoral College. But we're well into the Democratic presidential primary, and it has its own set of points: delegates. Now, the goal for each campaign is still to get the most votes possible but the winner isn't as simple as that. The winner is the person who can get to 1,991 delegates, which would give them 50%+ at the Democratic National Convention later this year in Wisconsin.
+Elections in this country are weird. So many of our elections aren't measured in the number of people who vote for a candidate but instead are measured in how many points a campaign can score.
 
-Delegates are mostly based on vote counts, but they are themselves much smaller numbers. And there are some sharp edges to the delegate math, such as the fact that any candidate with less than 15% gets exactly **0 delegates**.
+The most famous example of this is the Electoral College. But we're well into the Democratic presidential primary, and it has its own set of points: "delegates".
 
-So small flucations within an election can matter for the eventual delegate count. I wanted a very simple way to see the algorithim in action, so I made a small tool to determine how delegates are awarded within a single jurisdiction (which is another sharp edge as DNC delegates are awarded at the state _and_ district level).
+The goal for each campaign is still to get the most votes possible but the winner isn't as simple as that. The winner is the person who can get to 1,991 delegates, which would give them 50%+ at the Democratic National Convention later this year in Wisconsin. Having a majority of delegates means the candidate gets the party's nomination.
 
-Go on, give it a whirl.
+Delegates are _mostly_ based on vote counts, but they are themselves much smaller numbers. And there are some sharp edges to the delegate math, such as the fact that any candidate with less than 15% gets exactly **0 delegates**.
+
+So small flucations within an election can matter for the eventual delegate count. I wanted to see the algorithim in action so I made a small tool to determine how delegates are awarded within a single jurisdiction. Delegates are awarded at multiple jurisdications, such as the state level and generally the Congressional district level, though dependso n the state.
+
+If you're likewise curious about how delegates are figured out check out the calclulator tool below:
 
 <style>
   button {
@@ -22,8 +26,6 @@ Go on, give it a whirl.
     font-family: serif;
     font-size: 1.1rem;
     margin: 0 auto;
-    padding-left: .2rem;
-    padding-right: .2rem;
     text-decoration: none;
   }
 
@@ -42,22 +44,72 @@ Go on, give it a whirl.
     margin-bottom: 1rem;
   }
 
-  label {
-    width: 100%;
-  }
-
-  label span {
-    padding-left: .4rem;
-    padding-top: .4rem;
-  }
-
   input {
-    border: none;
-    font-size: 1.2rem;
-    padding-top: .3rem;
-    padding-bottom: .3rem;
-    text-align: right;
+    font-family: monospace;
+    font-size: 1.1rem;
+    width: 50%;
+  }
+
+  table {
+    border-collapse: collapse;
     width: 100%;
+  }
+
+  th {
+    display: none;
+    text-align: left;
+    width: 100%;
+  }
+
+  td {
+    border-bottom: 2px dashed #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+  }
+
+  td:last-child {
+    border-bottom: 2px solid black;
+  }
+
+  td::before {
+    content: attr(data-column);
+    display: inline-block;
+    font-weight: 700;
+  }
+
+  table input {
+    background: transparent;
+    border: none;
+    text-align: right;
+    width: 25%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    th {
+      display: table-cell;
+      width: 20%;
+    }
+
+    td::before {
+      display: none;
+    }
+
+    td {
+      display: table-cell;
+    }
+
+    td:last-child {
+      border-bottom: 2px dashed #ebebeb;
+    }
+
+    table input {
+      text-align: left;
+      width: 100%;
+    }
   }
 </style>
 
@@ -70,18 +122,26 @@ We're starting with an assumption that each candidate got 100 votes and that the
 
 <p>Let's assume that everybody's doing reasonably well and getting 20,000 votes. Except one candidate is clearly leading. Imagine that Bloomberg bought enough ad space and paid enough influencers to garner 33,333 votes.</p>
 
-<button class="db" id="load-bloomberg-scenario">Make it so!</button>
+<button class="db p1" id="load-bloomberg-scenario">Make it so!</button>
 
 <p>Well, that's all well and good and everybody's getting some delegates, though Mike is winning in the vote count and therefore is also winning in the delegate race. He gets 12 while everybody else is getting 8.</p>
 
-<p>But what if he gets _just one_ more vote? What if one of his supporters got their neighbor to come with them to the polls and cast that 33,334th vote for El Bloombito?</p>
+<p>But what if he gets just one more vote? What if one of his supporters got their neighbor to come with them to the polls and cast that 33,334th vote for El Bloombito?</p>
 
-<button class="db" id="bloomberg-scenario-give-vote">Give Bloomberg one more vote</button>
+<button class="db p1" id="bloomberg-scenario-give-vote">Give Bloomberg one more vote</button>
 
-<p>That one vote throws everybody else below the 15% threshold and all the delegates go to a single candidate.</p>
+<p>That one vote throws everybody else below the 15% threshold and all the delegates go to a single candidate. In the calculator, Bloomberg's percentage doesn't change with just one vote because of rounding.</p>
+
+<p>Now, of course there's going to be a point that triggers the threshold. This isn't to argue the merits of a 15% threshold, just showing one consequential effect of it.</p>
 </details>
 
+<div class="flex items-center justify-between mb2 sm-col-12 lg-col-6">
+  <label class="bold" for="delegates">Delegates</label>
+  <input id="delegates" type="number" min="0" value="50">
+</div>
+
 <div id="delegate-calculator"></div>
+<button class="p1" id="reset">Reset</button>
 
 ## Methodology
 

@@ -1,7 +1,8 @@
 (function() {
   let delegates = 50
-  const formatNumber = d3.format(',')
-  const results = [
+  let lastDrawn = null
+
+  const initialResults = [
     { name: 'Amy Klobuchar', votes: 100 },
     { name: 'Bernie Sanders', votes: 100 },
     { name: 'Elizabeth Warren', votes: 100 },
@@ -10,79 +11,29 @@
     { name: 'Pete Buttigieg', votes: 100 },
   ]
 
-  const bloombergLoadButton = d3.select('#load-bloomberg-scenario')
-  const bloombergAddVoteButton = d3.select('#bloomberg-scenario-give-vote')
+  const columns = [
+    { label: 'Name', key: 'name' },
+    { label: 'Votes', key: 'votes' },
+    { label: 'Percent', key: 'percent', format: value => {
+      if (value > .15) return d3.format('.2%')(value)
+      return (`${(value * 100)}`.slice(0, 5)) + '%'
+    }},
+    { label: 'Clears threshold', key: 'clearsThreshold', format: value => value ? 'Yes' : 'No' },
+    { label: 'Delegates', key: 'pledgedDelegates' },
+  ]
 
-  const target = d3.select('#delegate-calculator')
-  const calculator = target.append('div')
-  const graf = target.append('p')
-  const delegateCount = calculator.append('form')
-  const form = calculator
-    .append('form')
-
-  delegateCount
-    .append('label')
-    .text('Number of available delegates')
-
-  delegateCount.select('label')
-    .append('input')
-    .attr('type', 'number')
-
-  form
-    .append('legend')
-    .style('font-weight', 700)
-    .text('Candidates and their vote counts')
-
-  const labels = form
-    .selectAll('div')
-    .data(results)
-    .enter()
-    .append('div')
-      .classed('relative', true)
-      .append('label')
-      .classed('block', true)
-      
-    labels.append('span')
-      .classed('absolute', true)
-      .classed('block', true)
-      .text(d => `${d.name}'s votes`)
-    
-    labels.append('input')
-      .classed('bg-yellow', (d, i) => {
-        if (i % 2 !== 0) return true
-      })
-      .classed('block', true)
-      .classed('mono', true)
-      .attr('data-candidate', d => d.name)
-      .attr('type', 'number')
-      .attr('min', 0)
-      .attr('value', d => d.votes)
-      .on('change', () => {
-        const e = d3.event
-        const changeTarget = d3.select(e.target)
-        const candidate = changeTarget.attr('data-candidate')
-        const value = +e.target.value
-        const match = results.find(c => c.name === candidate)
-
-        match.votes = value
-        update()
-      })
-
-  function update() {
+  function enrichResults (results) {
     const totalVotes = d3.sum(results, c => c.votes)
     const withPercent = results.map(result => {
       const percent = result.votes / totalVotes
+      const clearsThreshold = percent >= .15
       return {
         ...result,
-        percent
+        percent,
+        clearsThreshold,
       }
     })
-    const aboveThreshold = withPercent.filter(result => {
-      return result.percent >= 0.15
-    })
-    const belowThreshold = withPercent.filter(result => {
-      return result.percent < 0.15
-    })
+    const aboveThreshold = withPercent.filter(result => result.percent >= 0.15)
     const totalVotesAboveThreshold = d3.sum(
       aboveThreshold,
       result => result.votes
@@ -119,57 +70,136 @@
       }
     )
 
-    const resultsList = withPercent.map(
-      r =>
-        `<li>${r.name} got ${formatNumber(r.votes)} votes (${d3.format('.4')(r.percent * 100)}%)</li>`
-    )
-    const delegatesList = finalDelegateCounts.map(
-      r => `<li>${r.name} would get ${r.pledgedDelegates} delegates</li>`
-    )
-    const belowThresholdList = belowThreshold.map(r => `<li>${r.name}</li>`)
-    graf.html(`
-    <p>Ok, so given that there are ${delegates} delegates available and the following vote count:</p>
-    <ul>${resultsList.join('')}</ul>
-    
-    <p>Then they'd get the following number of delegates:</p>
-    <ul>${delegatesList.join('')}</ul>
+    return withPercent.map(result => {
+      const withDelegates = finalDelegateCounts.find(r => r.name === result.name)
+      if (withDelegates) return withDelegates
 
-    <p>${belowThresholdList.length > 0
-      ? 'And the following candidates would get no delegates, as they didn\'t clear the 15% threshold:'
-      : 'All of the candidates cleared the threshold.'}
-    </p>
-    <ul>${belowThresholdList.join('')}</ul>
-    `)
+      return {
+        ...result,
+        pledgedDelegates: 0
+      }
+    })
   }
-  update()
 
-  bloombergLoadButton.on('click', () => {
-    results.forEach(result => {
-      const { name } = result
-      let votes = 20000
-      if (name.includes('Bloomberg')) votes = 33333
-     
-      result.votes = votes
-    })
+  function draw(results) {
+    lastDrawn = results
+    const target = d3.select('#delegate-calculator')
+    const enrichedResults = enrichResults(results)
+    let calculator = target.select('table')
+    const hasTable = calculator.nodes().length > 0
 
-    d3.selectAll('input[data-candidate]')
+    if (!hasTable) {
+      target.append('div').append('table')
+      calculator = target.select('table')
+
+      calculator
+        .append('thead')
+        .selectAll('th')
+        .data(columns)
+        .enter()
+        .append('th')
+        .text(d => d.label)
+
+      calculator
+        .append('tbody')
+    }
+
+    const rows = calculator.select('tbody')
+      .selectAll('tr')
+      .data(enrichedResults, d => d.name)
+
+    rows
+      .enter()
+      .append('tr')
+        .classed('bg-yellow', (d, i) => {
+          if (i % 2 !== 0) return true
+        })
+      .merge(rows)
       .each(function(d) {
-        let value = 20000
-        if (d.name.includes('Bloomberg')) {
-          value = 33333
-        }
+        const candidate = d.name
+        const row = d3.select(this)
+        const tds = row.selectAll('td')
+          .data(columns)
+        
+        tds.enter()
+          .append('td')
+          .attr('data-column', d => d.label)
+          .merge(tds)
+          .each(function(c) {
+            const td = d3.select(this)
+            const value = d[c.key]
 
-        d3.select(this).attr('value', value)
-      })
-    update()
-  })
-  bloombergAddVoteButton.on('click', () => {
-    results.forEach(result => {
-      const { name } = result
-      if (name.includes('Bloomberg')) result.votes = 33334
+            if (c.key !== 'votes') {
+              const formatted = c.format ? c.format(value) : value
+              td.text(formatted)  
+              return
+            }
+            
+            const bound = td
+              .selectAll('input')
+              .data([1])
+          
+            bound.enter()
+              .append('input')
+              .attr('type', 'number')
+              .merge(bound)
+              .property('value', value) 
+              .on('change', () => {
+                const inputValue = d3.event.target.value
+                const copy = enrichedResults.map(r => {
+                  return {
+                    ...r,
+                    votes: r.name === candidate ? +inputValue : r.votes
+                  }
+                })
+
+                draw(copy)
+              })
+          })
+    })
+  }
+
+  draw(initialResults)
+
+  d3.select('#load-bloomberg-scenario').on('click', () => {
+    const copy = [ ...initialResults ]
+
+    copy.forEach(r => {
+      const isBloomberg = r.name.includes('Bloomberg')
+      if (isBloomberg) r.votes = 33333
+      else r.votes = 20000
     })
 
-    d3.select('input[data-candidate="Mike Bloomberg"]').attr('value', 33334)
-    update()
+    draw(copy)
+  })
+
+  d3.select('#bloomberg-scenario-give-vote').on('click', () => {
+    const copy = [ ...initialResults ]
+
+    copy.forEach(r => {
+      const isBloomberg = r.name.includes('Bloomberg')
+      if (isBloomberg) r.votes = 33334
+      else r.votes = 20000
+    })
+
+    draw(copy)
+  })
+
+  d3.select('#reset').on('click', () => {
+    const copy = initialResults.map(row => {
+      row.votes = 100
+
+      return row
+    })
+    d3.select('#delegates').property('value', 50)
+    delegates = 50
+
+    draw(copy)
+  })
+
+  d3.select('#delegates').on('change', () => {
+    const value = d3.event.target.value
+    delegates = +value
+    draw(lastDrawn)
   })
 })()
