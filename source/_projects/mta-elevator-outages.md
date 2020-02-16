@@ -1,7 +1,7 @@
 ---
 name: MTA elevator outages
 href: /projects/subway-elevators
-order: 2
+order: 20
 ---
 
 The MTA (which runs the NYC subway, among other things) publishes elevator outage data to a website but doesn't provide much for folks looking to do analysis. It has no historical data available and does not provide users with a list of outages that have been resolved.

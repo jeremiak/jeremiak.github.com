@@ -1,5 +1,6 @@
 ---
 name: Cloud.gov dashboard
+hide: true
 href: https://cloud.gov
 order: 60
 ---

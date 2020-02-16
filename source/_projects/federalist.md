@@ -1,5 +1,6 @@
 ---
 name: Federalist
+hide: true
 href: https://federalist.18f.gov
 order: 40
 ---
