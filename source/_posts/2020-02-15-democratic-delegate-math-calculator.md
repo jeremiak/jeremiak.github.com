@@ -3,13 +3,13 @@ title: Dizzying Democratic delegate... math
 description: A short rant about Democratic delegates and a calculator tool to go along with it.
 ---
 
-Elections in the U.S. are weird. So many them aren't measured in the number of people who vote for a candidate but instead are measured in how many points a campaign can score.
+Elections in the U.S. are weird. So many of them aren't measured in the number of people who vote for a candidate but instead are measured in how many points a campaign can score.
 
 The most famous example of this is the Electoral College. But we're well into the Democratic presidential primary, and it has its own set of points: "delegates".
 
 The goal for each campaign is still to get the most votes possible but the winner isn't as simple as that. The winner is the person who can get to 1,991 delegates, which would give them 50%+ at the Democratic National Convention later this year in Wisconsin. Having a majority of delegates means the candidate gets the party's nomination.
 
-Delegates are _mostly_ based on vote counts, but there are some sharp edges to the delegate math. For example any candidate with less than 15% gets **0 delegates**.
+Delegates are _mostly_ based on vote counts, but there are some sharp edges to the delegate math. For example any candidate with less than 15% gets 0 delegates.
 
 So small fluctuations within an election can matter for the eventual delegate count. I wanted to see the allocation algorithim in action so I made a small tool to determine how delegates are awarded within a single jurisdiction. Delegates are awarded at multiple jurisdications, such as the state level and generally the Congressional district level, though depends on the state.
 
