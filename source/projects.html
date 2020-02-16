@@ -1,17 +1,25 @@
 ---
 layout: default
 permalink: projects/
-title: Projects
+title: Work
 ---
 
-<h1><span class="strike">Projects</span> Websites & widgets</h1>
+<h1><span class="strike">Work</span> Projects & pieces</h1>
 
 <ul class="list-style-none p0">
 {% assign projects = site.projects | sort: "order" %}
 {% for project in projects %}
-  <li class="bg-white line-height-2 mb2 p1 sm-p2 pr-p0">
-    <p class="h3 m0"><a class="pr-p0" href="{{ project.href }}">{{ project.name }}</a></p>
-    {{ project.content }}
-  </li>
+  {% unless project.hide %}
+    <li class="bg-white line-height-2 mb2 p1 sm-p2 pr-p0">
+      <p class="h3 m0">
+        {% if project.href %}
+          <a class="pr-p0" href="{{ project.href }}">{{ project.name }}</a>
+        {% else %}
+          <span class="pr-p0">{{ project.name }}</span>
+        {% endif %}
+      </p>
+      {{ project.content }}
+    </li>
+  {% endunless %}
 {% endfor %}
 </ul>

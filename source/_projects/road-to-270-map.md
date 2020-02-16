@@ -4,4 +4,4 @@ href: https://www.nbcnews.com/specials/road-to-270-2020/
 order: 10
 ---
 
-An interactive tool I developed for NBC News to help readers explore various scenarios by which each major party could win the White House through the Electoral College.
+The Electoral College is an important but complicated part of our democracy, as it is the mechanism by which our political leader is chosen. I led development of an interactive tool designed to allow readers to see various scenarios, and create their own, of how the race to 270 votes in the College might shape up in November 2020.

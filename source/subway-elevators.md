@@ -1,10 +1,8 @@
 ---
-layout: default
-title: NYC MTA elevator outages
+layout: project
+title: New York City MTA elevator outage data
 permalink: /projects/subway-elevators/
 ---
-
-# MTA elevator outage data
 
 The MTA reports elevator and escalator outages on [their outage reporting site](https://advisory.mtanyct.info/EEoutage/EEOutageReport.aspx?StationID=All) but it isn't very extensible. There is no way to download the data in bulk and there is no real notion of an elevator/escalator returning to service. As best as I can tell, the outage is simply removed from the site.
 

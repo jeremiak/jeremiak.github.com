@@ -39,6 +39,10 @@ So small fluctuations within an election can matter for the eventual delegate co
     padding: .4rem;
   }
 
+  summary {
+    cursor: pointer;
+  }
+
   details p {
     margin-bottom: 1rem;
   }
