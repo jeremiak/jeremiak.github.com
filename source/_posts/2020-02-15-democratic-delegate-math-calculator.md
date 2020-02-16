@@ -10,7 +10,7 @@ The goal for each campaign is still to get the most votes possible but the winne
 
 Delegates are _mostly_ based on vote counts, but they are themselves much smaller numbers. And there are some sharp edges to the delegate math, such as the fact that any candidate with less than 15% gets exactly **0 delegates**.
 
-So small flucations within an election can matter for the eventual delegate count. I wanted to see the algorithim in action so I made a small tool to determine how delegates are awarded within a single jurisdiction. Delegates are awarded at multiple jurisdications, such as the state level and generally the Congressional district level, though dependso n the state.
+So small flucations within an election can matter for the eventual delegate count. I wanted to see the algorithim in action so I made a small tool to determine how delegates are awarded within a single jurisdiction. Delegates are awarded at multiple jurisdications, such as the state level and generally the Congressional district level, though depends on the state.
 
 If you're likewise curious about how delegates are figured out check out the calclulator tool below:
 
@@ -112,8 +112,6 @@ If you're likewise curious about how delegates are figured out check out the cal
     }
   }
 </style>
-
-## Delegate calculator
 
 We're starting with an assumption that each candidate got 100 votes and that there are 50 delegates available in the jurisdiction. You can, of course, change any of those assumptions below. If you change any of the fields below, the delegate count will update.
 
