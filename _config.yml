@@ -24,3 +24,5 @@ destination: public
 exclude:
   - vendor
 source: source
+gems:
+  - jekyll-feed

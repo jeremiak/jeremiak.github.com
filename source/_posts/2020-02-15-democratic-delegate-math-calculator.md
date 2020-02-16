@@ -1,5 +1,6 @@
 ---
 title: Dizzying Democratic delegate... math
+description: A short rant about Democratic delegates and a calculator tool to go along with it.
 ---
 
 Elections in this country are weird. So many of our elections aren't measured in the number of people who vote for a candidate but instead are measured in how many points a campaign can score.
@@ -11,8 +12,6 @@ The goal for each campaign is still to get the most votes possible but the winne
 Delegates are _mostly_ based on vote counts, but they are themselves much smaller numbers. And there are some sharp edges to the delegate math, such as the fact that any candidate with less than 15% gets exactly **0 delegates**.
 
 So small flucations within an election can matter for the eventual delegate count. I wanted to see the algorithim in action so I made a small tool to determine how delegates are awarded within a single jurisdiction. Delegates are awarded at multiple jurisdications, such as the state level and generally the Congressional district level, though depends on the state.
-
-If you're likewise curious about how delegates are figured out check out the calclulator tool below:
 
 <style>
   button {
@@ -64,6 +63,7 @@ If you're likewise curious about how delegates are figured out check out the cal
   td {
     border-bottom: 2px dashed #ebebeb;
     display: flex;
+    font-size: .9rem;
     justify-content: space-between;
     padding-left: .2rem;
     padding-right: .2rem;
@@ -78,14 +78,16 @@ If you're likewise curious about how delegates are figured out check out the cal
   td::before {
     content: attr(data-column);
     display: inline-block;
+    font-size: .7rem;
     font-weight: 700;
+    padding-top: .2rem;
   }
 
   table input {
     background: transparent;
     border: none;
     text-align: right;
-    width: 25%;
+    width: 75%;
   }
 
   @media screen and (min-width: 1000px) {
@@ -100,6 +102,7 @@ If you're likewise curious about how delegates are figured out check out the cal
 
     td {
       display: table-cell;
+      font-size: 1rem;
     }
 
     td:last-child {
