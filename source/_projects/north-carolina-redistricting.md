@@ -5,3 +5,8 @@ order: 13
 ---
 
 I created the two high definition maps that clearly illustrate the partisan redistricting that has been occuring in North Carolina for the last decade, if not longer. I developed tools to analyze and the large data set and designed the maps that show where each registered voter with a partisan affiliation lives in the Western part of the state.
+
+<div class="flex justify-around">
+  <img src="/img/projects/nbc-nc-2010.png" width="47%">
+  <img src="/img/projects/nbc-nc-2012.png" width="47%">
+</div>
