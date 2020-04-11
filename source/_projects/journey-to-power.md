@@ -6,14 +6,13 @@ order: 18
 
 I designed and developed the data graphics for this nine part piece by Steve Kornacki. It is a look at how the importance of black voters has grown within the Democratic party by looking at each contested presidential primary since 1976.
 
-<style>
-  .journey-to-power {
+<!-- <style>
+  .journey-to-power-images {
     display: grid;
     grid-column-gap: 1rem;
     grid-template-columns: 50% 50%;
     grid-template-rows: 300px 300px;
     margin: 0 auto;
-    width: 60%;
   }
 
   [src$="-power-76-table.png"] {
@@ -36,10 +35,22 @@ I designed and developed the data graphics for this nine part piece by Steve Kor
     height: 100%;
     width: auto;
   }
+</style> -->
+
+<style>
+  .journey-to-power-images {
+
+  }
 </style>
 
-<div class="journey-to-power">
-  <img src="/img/projects/nbc-journey-to-power-76-table.png" height="auto" width="47%">
-  <img src="/img/projects/nbc-journey-to-power-bar.png" width="47%">
-  <img src="/img/projects/nbc-journey-to-power-small-multiples.png" width="47%">
+<div class="flex flex-column md-flex-row justify-between journey-to-power-images">
+  <div class="pr2">
+    <img src="/img/projects/nbc-journey-to-power-small-multiples.png" height="auto" width="100%">
+  </div>
+  <div class="col-12 md-col-8 pb2 pr2">
+    <img src="/img/projects/nbc-journey-to-power-76-table.png" height="auto" width="100%">
+  </div>
+  <div class="col-7 md-col-5">
+    <img src="/img/projects/nbc-journey-to-power-bar.png" height="auto" width="100%">
+  </div>
 </div>

@@ -1,3 +1,7 @@
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
 .row-reverse {
   flex-direction: row-reverse;
 }
@@ -13,5 +17,11 @@
 
   .sm-row-reverse {
     flex-direction: row-reverse;
+  }
+}
+
+@media #{$breakpoint-md} {
+  .md-flex-row {
+    flex-direction: row;
   }
 }

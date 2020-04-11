@@ -5,6 +5,19 @@
 }
 
 @media #{$breakpoint-md} {
+  .md-pl1 {
+    padding-left: $space-1;
+  }
+  
+  .md-pl2 {
+    padding-left: $space-2;
+  }
+
+  .md-pr1 {
+    padding-right: $space-1;
+  }
+
+
   .md-px2 {
     padding-left: $space-2;
     padding-right: $space-2;
