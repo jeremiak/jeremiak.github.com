@@ -28,7 +28,7 @@ html {
 
 // these apply to general selectors so that they show up
 // consistently in the rendered markdown
-a {
+a:not(.no-style) {
   background-color: $gold;
   border-color: transparent;
   border-style: solid;
@@ -46,7 +46,7 @@ a {
   }
 }
 
-a:hover {
+a:not(.no-style):hover {
   background-color: transparent;
   border-color: $gold;
   border-style: dashed;
