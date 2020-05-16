@@ -19,8 +19,22 @@ order: 16
   </div>
 </div>
 
-
 <div class="flex column-reverse md-flex-row justify-between">
+  <div class="col-12 md-col-6 md-pr2">
+    <img class="mt2" src="/img/projects/transgender-prisoner-stats.gif" width="100%" height="auto">
+  </div>
+
+  <div class="col-12 md-col-6">
+    <p class="mt2">
+      <a class="block" href="https://www.nbcnews.com/feature/nbc-out/transgender-women-are-nearly-always-incarcerated-men-s-putting-many-n1142436">
+        Trans, imprisoned — and trapped: Transgender prisoners are almost never housed according to their identity, an investigation found. That’s putting many in danger.
+      </a>
+      <span class="block mt1">(02/26/2020)</span>
+    </p>
+    <p class="mt0"></p>
+  </div>
+</div>
+<div class="flex md-flex-row justify-between">
   <div class="col-12 md-col-6 md-pl2">
     <img class="mt2" src="/img/projects/nbc-trump-runways.gif" width="100%" height="auto">
   </div>
