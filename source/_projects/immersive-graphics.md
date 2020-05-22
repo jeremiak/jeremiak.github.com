@@ -35,10 +35,6 @@ order: 16
   </div>
 </div>
 <div class="flex md-flex-row justify-between">
-  <div class="col-12 md-col-6 md-pl2">
-    <img class="mt2" src="/img/projects/nbc-trump-runways.gif" width="100%" height="auto">
-  </div>
-
   <div class="col-12 md-col-6">
     <p class="mt2">
       <a class="block" href="https://www.nbcnews.com/politics/2020-election/re-election-runway-what-u-s-airports-can-tell-us-n1060416">
@@ -47,5 +43,9 @@ order: 16
       <span class="block mt1">(10/28/2019)</span>
     </p>
     <p class="mt0"></p>
+  </div>
+
+  <div class="col-12 md-col-6 md-pl2">
+    <img class="mt2" src="/img/projects/nbc-trump-runways.gif" width="100%" height="auto">
   </div>
 </div>
