@@ -8,6 +8,8 @@ The MTA reports elevator and escalator outages on [their outage reporting site](
 
 This data set only contains information about elevators and has no notion of escalator outages. The scraper frequently checks on the outage reporting site and publishes data to S3 once a day.
 
+**Note**: The data contains a large gap from February 2019 until late August of 2020 because [the scraper had stopped and I didn't notice](https://twitter.com/jeremiak/status/1299051108300513280) :(
+
 ## Data
 The data is available as a CSV and contains a row for each observed elevator outage.
 
