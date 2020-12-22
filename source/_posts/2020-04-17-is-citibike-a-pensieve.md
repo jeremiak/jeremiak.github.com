@@ -33,7 +33,7 @@ When I loaded up the data in ([this Observable notebook](https://observablehq.co
 
 <div class="flex flex-column md-row-reverse mb2">
   <p class="mt0 pl0 md-pl2">Baby arrives in New York! At this point, we didn't have Citibike memberships and we mostly used it while we sublet an apartment near Washington Square Park during the middle of our first hot, humid, thunderstorm-filled summer. Also, I ate a ton of sliced mangos from a bodega down the street.</p>
-  <img src="/img/citibike/citibike-2015.png">
+  <img src="/img/citibike/citibike-2015.png" alt="Map of my rides on Citibike in 2015">
 </div>
 
 <div class="flex flex-column md-flex-row mb2">
@@ -42,7 +42,7 @@ When I loaded up the data in ([this Observable notebook](https://observablehq.co
     <p>We rode Citibikes all over, sometimes venturing over the Williamsburg Bridge. But mostly we just used it to get around the neighborhoods.</p>
     <p>And this trip from the West Village east across the island is from my trips to my favorite barber. That's funny to see.</p>
   </div>
-  <img src="/img/citibike/citibike-2016.png">
+  <img src="/img/citibike/citibike-2016.png"  alt="Map of my rides on Citibike in 2016">
 </div>
 
 <div class="flex flex-column md-row-reverse mb2">
@@ -51,7 +51,7 @@ When I loaded up the data in ([this Observable notebook](https://observablehq.co
     <p>I see the time Faye and I rode Citibike's home from our friend's house in Hell's Kitchen down the West Side and into the LES. I remember the many trips we took up 1st Ave to eat Indian food. Oh, and it looks like I got a lot of haircuts too.</p>
     <p>In the fall, we moved across the river, which is why there's lots of activity in central Brooklyn.</p>
   </div>
-  <img src="/img/citibike/citibike-2017.png">
+  <img src="/img/citibike/citibike-2017.png" alt="Map of my rides on Citibike in 2017">
 </div>
 
 <div class="flex flex-column md-flex-row mb2">
@@ -59,7 +59,7 @@ When I loaded up the data in ([this Observable notebook](https://observablehq.co
     <p class="mt0">Big things happened in 2018. I started working at NBC News at 30 Rock in Midtown Manhattan. I didn't do all that much bike commuting, most Most of the biking between the boroughs was done over the Manhattan Bridge. Which, is nice and all, but the Williamsburg Bridge is my favorite.</p>
     <p>And I was rock climbing a lot more, hence the trips to Gowanus.</p>
   </div>
-  <img src="/img/citibike/citibike-2018.png">
+  <img src="/img/citibike/citibike-2018.png" alt="Map of my rides on Citibike in 2018">
 </div>
 
 <div class="flex flex-column md-row-reverse mb2">
@@ -68,9 +68,9 @@ When I loaded up the data in ([this Observable notebook](https://observablehq.co
   <p>But when I also figured out that the B/D trains were way more pleasant than the G, so I started using Citibike to quickly get to Atlantic Terminal.</p>
   <p>And a few of our friends moved up near Greenpoint, so we rode along the Navy Yard on what is a pretty nice bike path.</p>
   </div>
-  <img src="/img/citibike/citibike-2019.png">
+  <img src="/img/citibike/citibike-2019.png" alt="Map of my rides on Citibike in 2019">
 </div>
 
-<p>Of course, there are far too many cherished memories than can be expressed just through some surveillance of my bike habits. I suppose that just like no data set really offers you a full picture of... anything, this is just a fun angle on my time trying to make it in the Big City. 
+<p>Of course, there are far too many cherished memories than can be expressed just through some surveillance of my bike habits. I suppose that just like no data set really offers you a full picture of... anything, this is just a fun angle on my time trying to make it in the Big City.
 
 <p>👋 Bye bye, New York. Ride safe.</p>
